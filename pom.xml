@@ -8,9 +8,22 @@
     <artifactId>McpSpring</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <packaging>pom</packaging>
+
+
+
+    <!-- Module (Ordnernamen müssen exakt stimmen) -->
+    <modules>
+        <module>ChatbotAlge</module>
+        <module>FrontEnd</module>
+        <module>McpSpring-client</module>
+        <module>McpSpring-Server</module>
+    </modules>
+
     <properties>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <!-- Einheitliche Java-Version für alle Module -->
+        <java.version>17</java.version>
+        <maven.compiler.release>${java.version}</maven.compiler.release>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
