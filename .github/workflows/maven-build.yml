@@ -22,17 +22,21 @@ jobs:
 
     # 1. Server
       - name: Build McpSpring-Server
+        working-directory: ./McpSpring-Server
         run: mvn -B -pl McpSpring-Server -am clean verify
 
     # 2. Client
       - name: Build McpSpring-client
+        working-directory: ./McpSpring-client
         run: mvn -B -pl McpSpring-client -am clean verify
 
      # 3. ChatbotAlge
       - name: Build ChatbotAlge
+        working-directory: ./ChatbotAlge
         run: mvn -B -pl ChatbotAlge -am clean verify
 
     # 4. FrontEnd
       - name: Build FrontEnd
+        working-directory: ./FrontEnd
         run: mvn -B -pl FrontEnd -am clean verify
 
