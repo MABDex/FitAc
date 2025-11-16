@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/McpSpring-Server/pom.xml" />
+        <option value="$PROJECT_DIR$/McpSpring-client/pom.xml" />
+        <option value="$PROJECT_DIR$/SpringSecurity/pom.xml" />
+        <option value="$PROJECT_DIR$/FrontEnd/pom.xml" />
+        <option value="$PROJECT_DIR$/ChatBotAlg/pom.xml" />
+        <option value="$PROJECT_DIR$/ChatAlgem/pom.xml" />
+        <option value="$PROJECT_DIR$/AlgemChat/pom.xml" />
+        <option value="$PROJECT_DIR$/ChatbotAlge/pom.xml" />
+      </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/AlgemChat/pom.xml" />
+        <option value="$PROJECT_DIR$/ChatAlgem/pom.xml" />
+        <option value="$PROJECT_DIR$/ChatBotAlg/pom.xml" />
+      </set>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_21" default="true" project-jdk-name="ms-21" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/out" />
+  </component>
+</project>

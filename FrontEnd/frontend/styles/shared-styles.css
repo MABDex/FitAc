@@ -1,0 +1,145 @@
+.navbar {
+    background-color: rgba(0, 95, 126);
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.navbar-links > *:not(:last-child)::after {
+    content: "|"; /* Trennlinie */
+    color: white;
+    margin-left: 10px;
+}
+
+.chat-header {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+}
+
+.button-chatbot, .button-ragbot {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.button-chatbot {
+    background-color: rgba(0, 123, 126);
+    color: white;
+}
+
+.button-ragbot {
+    background-color: rgba(200, 200, 200, 0.97);
+    color: white;
+}
+
+
+
+.button-selected {
+    color: #1E40AF !important; /* Textfarbe ändern */
+}
+
+
+
+.chat-title {
+    font-size: 16px;
+    margin: 14px 0;
+    color: rgba(0, 0, 0, 0.76);
+}
+
+.chat-area {
+    flex: 1;              /* füllt den Platz oberhalb vom Input */
+    overflow-y: auto;     /* scrollbarer Bereich */
+    padding: 10px;
+    background-color: white;
+}
+
+
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.input-field {
+    background-color: rgba(200, 200, 200, 0.97);
+    border-radius: 30px;
+    padding: 2px 8px;          /* abgerundete Ecken */
+    color: black;               /* Textfarbe */
+}
+
+
+.input-field::placeholder {
+    color: #000000;  /* Textfarbe des Platzhalters */
+    opacity: 1;    /* macht sicher, dass es gut sichtbar ist */
+}
+
+
+.input-layout {
+    padding: 10px;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+}
+
+
+.send-button {
+    background-color: #F5F5F5FF; /* Blau, halbtransparent */
+    color: #007B7EFF;  /* Icon bleibt grün */
+    border: none;
+    cursor: pointer;
+    margin-left: auto;
+    margin-right: 10px;
+    border-radius: 50%; /* rund wie bei Telegram */
+    width: 40px;        /* Breite */
+    height: 40px;       /* Höhe */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.send-button:hover {
+    background-color: #F5F5F5FF; /* kräftigeres Blau beim Hover */
+    color: #0033ff; /* Icon bleibt grün */
+}
+
+
+.mic-button {
+    background-color: #F5F5F5FF;
+    color: #007B7EFF;
+    border: none;
+    cursor: pointer;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mic-button:hover {
+    background-color: #F5F5F5FF; /* dunkleres Grün beim Hover */
+    color: white;
+}

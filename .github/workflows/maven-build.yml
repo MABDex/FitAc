@@ -1,0 +1,38 @@
+name : Java CI with Maven
+
+on :
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out the repository
+        uses: actions/checkout@v4
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+    # 1. Server
+      - name: Build McpSpring-Server
+        run: mvn -B -pl McpSpring-Server -am clean verify
+
+    # 2. Client
+      - name: Build McpSpring-client
+        run: mvn -B -pl McpSpring-client -am clean verify
+
+     # 3. ChatbotAlge
+      - name: Build ChatbotAlge
+        run: mvn -B -pl ChatbotAlge -am clean verify
+
+    # 4. FrontEnd
+      - name: Build FrontEnd
+        run: mvn -B -pl FrontEnd -am clean verify
+

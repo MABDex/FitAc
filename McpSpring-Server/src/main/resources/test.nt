@@ -1,0 +1,859 @@
+<http://fit.fraunhofer.de/recipes/25274> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/name> "Aww  marinated olives" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/identifier> "25274" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/prepTime> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/description> "my italian mil was thoroughly impressed by my non-italian treatment of her olives. they are great appetizers and condiments to your fav pasta.(from the vancouver sun) ps. cook time include fridge time" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/numberOfSteps> "4" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/15-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/appetizers> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/fruit> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/canadian> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/dinner-party> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegan> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetarian> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/freezer> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords> <http://schema.org/recipes/tags/number-of-servings> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/keywords_raw> "['15-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'appetizers', 'fruit', 'canadian', 'dinner-party', 'vegan', 'vegetarian', 'freezer', 'dietary', 'equipment', 'number-of-servings']" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/25274> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/25274> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/recipeIngredients_raw> "['fennel seeds', 'green olives', 'ripe olives', 'garlic', 'peppercorn', 'orange rind', 'orange juice', 'red chile', 'extra virgin olive oil']" .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/25274> .
+<http://fit.fraunhofer.de/recipes/25274> <http://schema.org/recipeInstructions_raw> "['toast the fennel seeds and lightly crush them', 'place all the ingredients in a bowl , stir well', 'cover and leave to marinate', 'keep refrigerated and use within 1 to 2 days']" .
+<http://fit.fraunhofer.de/recipes/67888> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/name> "Backyard style  barbecued ribs" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/identifier> "67888" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/prepTime> "120"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/description> "this recipe is posted by request and was originaly from chef sam choy's cookbook" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/numberOfSteps> "10" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/south-west-pacific> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/pork> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/holiday-event> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/hawaiian> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/spicy> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/copycat> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/independence-day> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/pork-ribs> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/super-bowl> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/novelty> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/savory> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/sweet> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/keywords_raw> "['weeknight', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'south-west-pacific', 'main-dish', 'pork', 'oven', 'holiday-event', 'stove-top', 'hawaiian', 'spicy', 'copycat', 'independence-day', 'meat', 'pork-ribs', 'super-bowl', 'novelty', 'taste-mood', 'savory', 'sweet', 'equipment', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/67888> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/67888> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/recipeIngredients_raw> "['pork spareribs', 'soy sauce', 'fresh garlic', 'fresh ginger', 'chili powder', 'fresh coarse ground black pepper', 'salt', 'fresh cilantro leaves', 'tomato sauce', 'brown sugar', 'yellow onion', 'white vinegar', 'honey', 'a.1. original sauce', 'liquid smoke', 'cracked black pepper', 'cumin', 'dry mustard', 'cinnamon sticks', 'orange, juice of', 'mirin', 'water']" .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/67888> .
+<http://fit.fraunhofer.de/recipes/67888> <http://schema.org/recipeInstructions_raw> "['in a medium saucepan combine all the ingredients for sauce#1 , bring to a full rolling boil , reduce heat to medium low and simmer for 1 hour , stirring often', 'rub the ribs with soy sauce , garlic , ginger , chili powder , pepper , salt and chopped cilantro , both sides !', 'wrap ribs in heavy duty foil', 'let stand 1 hour', 'preheat oven to 350 degrees', 'place ribs in oven for 1 hour , turning once after 30 minutes', '3 times during cooking the ribs open foil wrap and drizzle ribs with sauce#1', 'place all the ingredients for sauce#2 in a glass or plastic bowl , whisk well and set aside', 'remove ribs from oven and place on serving platter', 'offer both sauces at table to drizzle over ribs']" .
+<http://fit.fraunhofer.de/recipes/70971> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/name> "Bananas 4 ice cream  pie" .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/identifier> "70971" .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/prepTime> "180"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/numberOfSteps> "8" .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/pies-and-tarts> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/desserts> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/lunch> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/snacks> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/no-cook> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/refrigerator> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/kid-friendly> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/frozen-desserts> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/pies> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/chocolate> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/inexpensive> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/number-of-servings> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/technique> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/keywords_raw> "['weeknight', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'pies-and-tarts', 'desserts', 'lunch', 'snacks', 'no-cook', 'refrigerator', 'kid-friendly', 'frozen-desserts', 'pies', 'chocolate', 'dietary', 'inexpensive', 'equipment', 'number-of-servings', 'technique', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/70971> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/70971> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/recipeIngredients_raw> "['chocolate sandwich style cookies', 'chocolate syrup', 'vanilla ice cream', 'bananas', 'strawberry ice cream', 'whipped cream']" .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/70971> .
+<http://fit.fraunhofer.de/recipes/70971> <http://schema.org/recipeInstructions_raw> "['crumble cookies into a 9-inch pie plate , or cake pan', 'pat down to form an even layer', 'drizzle 1 cup of chocolate topping evenly over the cookies with a small spoon', 'scoop the vanilla ice cream on top of the chocolate and smooth down', 'cover with half of the sliced bananas', 'top with strawberry ice cream', 'cover and freeze until firm', 'before serving , top with 1 / 4 cup chocolate topping , whipped cream , and sliced bananas']" .
+<http://fit.fraunhofer.de/recipes/75452> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/name> "Beat this  banana bread" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/identifier> "75452" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/prepTime> "70"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/description> "from ann hodgman's" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/numberOfSteps> "12" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/breads> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/breakfast> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/fruit> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/oamc-freezer-make-ahead> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/quick-breads> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/tropical-fruit> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/bananas> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/brunch> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/number-of-servings> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/keywords_raw> "['weeknight', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'breads', 'breakfast', 'fruit', 'oven', 'dietary', 'oamc-freezer-make-ahead', 'quick-breads', 'tropical-fruit', 'bananas', 'brunch', 'equipment', 'number-of-servings', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/75452> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/75452> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/recipeIngredients_raw> "['sugar', 'unsalted butter', 'bananas', 'eggs', 'fresh lemon juice', 'orange rind', 'cake flour', 'baking soda', 'salt']" .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/75452> .
+<http://fit.fraunhofer.de/recipes/75452> <http://schema.org/recipeInstructions_raw> "['preheat oven to 350 degrees', 'butter two 9x5\" loaf pans', 'cream the sugar and the butter until light and whipped', 'add the bananas , eggs , lemon juice , orange rind', 'beat until blended uniformly', 'be patient , and beat until the banana lumps are gone', 'sift the dry ingredients together', 'fold lightly and thoroughly into the banana mixture', 'pour the batter into prepared loaf pans', 'bake for 45 to 55 minutes , until the loaves are firm in the middle and the edges begin to pull away from the pans', 'cool the loaves on racks for 30 minutes before removing from the pans', 'freezes well']" .
+<http://fit.fraunhofer.de/recipes/109439> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/name> "Berry  good sandwich spread" .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/identifier> "109439" .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/prepTime> "5"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/description> "horseradish is one of my favorite condiments as well as cranberry sauce. this is sweet and hot. i enjoy it on a smoked turkey & swiss sandwich, but also good alongside baked ham or roast beef." .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/numberOfSteps> "2" .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/15-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-protein> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/5-ingredients-or-less> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/condiments-etc> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-sodium> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/keywords_raw> "['15-minutes-or-less', 'time-to-make', 'course', 'preparation', 'low-protein', 'healthy', '5-ingredients-or-less', 'condiments-etc', 'easy', 'dietary', 'low-sodium', 'low-in-something', '3-steps-or-less']" .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/109439> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/109439> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/recipeIngredients_raw> "['whole berry cranberry sauce', 'sour cream', 'prepared horseradish']" .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/109439> .
+<http://fit.fraunhofer.de/recipes/109439> <http://schema.org/recipeInstructions_raw> "['in medium size bowl , coarsely mash cranberry sauce', 'stir in sour cream and horseradish until well blended']" .
+<http://fit.fraunhofer.de/recipes/42198> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/name> "Better than sex  strawberries" .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/identifier> "42198" .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/prepTime> "1460"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/description> "simple but sexy. this was in my local newspaper's food section. cook time reflects refrigeration time.  i've been asked several times if this should be baked.  just to clarify, no, it is not, it is a refrigerator dessert. i'm not sure why it contains raw egg, but most tiramisu recipes do too." .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/numberOfSteps> "8" .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-protein> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/pies-and-tarts> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/desserts> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/fruit> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/1-day-or-more> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/pies> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-sodium> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/comfort-food> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/berries> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/strawberries> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/keywords_raw> "['weeknight', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'low-protein', 'pies-and-tarts', 'desserts', 'fruit', '1-day-or-more', 'pies', 'dietary', 'low-sodium', 'comfort-food', 'low-in-something', 'berries', 'strawberries', 'taste-mood']" .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/42198> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/42198> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/recipeIngredients_raw> "['vanilla wafers', 'butter', 'powdered sugar', 'eggs', 'whipping cream', 'strawberry', 'walnuts']" .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/42198> .
+<http://fit.fraunhofer.de/recipes/42198> <http://schema.org/recipeInstructions_raw> "['crush vanilla wafers into fine crumbs and line a square 8\" x8\" pan', 'mix butter or margarine and sugar', 'add beaten eggs', 'spread the mixture over the wafer crumbs', 'crush strawberries and spread over sugar , egg , and butter mixture', 'cover strawberries with whipped cream', 'sprinkle with chopped nuts', 'chill 24 hours']" .
+<http://fit.fraunhofer.de/recipes/67547> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/name> "Better then bush s  baked beans" .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/identifier> "67547" .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/prepTime> "2970"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/description> "i'd have to say that this is a labor of love dish, but i give you my word that this recipe is better than bush's. enjoy! oh, and also this recipe is easily doubled. in fact, i think it turns out better when it is." .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/numberOfSteps> "9" .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/side-dishes> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/beans> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/american> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/1-day-or-more> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/potluck> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/to-go> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/keywords_raw> "['weeknight', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'side-dishes', 'beans', 'american', '1-day-or-more', 'oven', 'potluck', 'to-go', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/67547> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/67547> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/recipeIngredients_raw> "['great northern bean', 'chicken bouillon cubes', 'dark brown sugar', 'molasses', 'cornstarch', 'onion', 'garlic powder', 'mustard powder', 'chili powder', 'salt', 'black pepper', 'bacon', 'water']" .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/67547> .
+<http://fit.fraunhofer.de/recipes/67547> <http://schema.org/recipeInstructions_raw> "['in a very large sauce pan cover the beans and bouillon cubes in 3 inches of water', 'bring to a boil , cover , and let sit for 1 1 / 2 hours', 'preheat oven to 350 degrees f', \"drain and pour beans into a 9'x11' pan\", 'add the rest over the ingredients , stir , and bake until all the water has evaporated , about 3 hours', 'remove from oven , cover , and let sit overnight', 'preheat oven to 350 degrees f', 'add the next 5 cups of water , and bake until all the water has evaporated , about 3 hours', 'serving suggestions: challah bread , steak , hamburgers']" .
+<http://fit.fraunhofer.de/recipes/136709> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/name> "Ground sirloin cutlets" .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/identifier> "136709" .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/prepTime> "15"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/description> "a simple version of country-fried steak.  i am not a big fan of country gravy so i serve this with brown gravy and mashed potatoes." .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/numberOfSteps> "5" .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/15-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/beef> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/ground-beef> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/keywords_raw> "['15-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'main-dish', 'beef', 'easy', 'dietary', 'ground-beef', 'meat']" .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/136709> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/136709> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/recipeIngredients_raw> "['ground sirloin', 'bread', 'onions', 'worcestershire sauce', 'egg', 'salt and pepper', 'seasoned stuffing mix', 'shortening']" .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/136709> .
+<http://fit.fraunhofer.de/recipes/136709> <http://schema.org/recipeInstructions_raw> "['mix together ground beef , bread , onion , worcestershire sauce , egg , salt and pepper', 'form into 6 patties', 'press patties into crushed stuffing mix until well coated on all sides', 'heat shortening in a large skillet over medium heat', 'saut patties about 5 minutes on each side until brown and crispy']" .
+<http://fit.fraunhofer.de/recipes/158141> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/name> "Ground sirloin steaks with brown gravy" .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/identifier> "158141" .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/prepTime> "25"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/description> "this is a simple throw together meal that i make quite often.  if you need something quick, or you're just tired and don't want to do a lot of work, this is the meal for you!  serve with a simple vegetable and rolls for a full meal." .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/numberOfSteps> "8" .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/30-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/5-ingredients-or-less> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/beef> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/beginner-cook> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/ground-beef> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/keywords_raw> "['30-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', '5-ingredients-or-less', 'main-dish', 'beef', 'easy', 'beginner-cook', 'ground-beef', 'meat']" .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/158141> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/158141> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/recipeIngredients_raw> "['ground sirloin', 'onion soup mix', 'seasoning salt', 'brown gravy mix', 'water']" .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/158141> .
+<http://fit.fraunhofer.de/recipes/158141> <http://schema.org/recipeInstructions_raw> "['preheat a skillet over medium heat', 'in a medium bowl , mix ground sirloin , onion soup mix , and seasoning salt until well mixed', 'divide and flatten into three patties approximately 1 / 2\" thick', 'brown patties on skillet , turning once or twice only , until done through', 'meanwhile , in a small sauce pan , mix brown gravy mix with water', 'using a whisk , mix until slightly bubbling', 'lower heat and allow to thicken', 'serve patties with gravy']" .
+<http://fit.fraunhofer.de/recipes/278404> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/name> "Ground sirloin wellington" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/identifier> "278404" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/prepTime> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/description> "for sweetheart dinner 2008. adapted from dining in" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/numberOfSteps> "9" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/savory-pies> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/beef> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/dinner-party> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/comfort-food> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/ground-beef> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/savory> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/keywords_raw> "['time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'savory-pies', 'main-dish', 'beef', 'oven', 'dinner-party', 'comfort-food', 'ground-beef', 'meat', 'taste-mood', 'savory', 'equipment', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/278404> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/278404> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/recipeIngredients_raw> "['puff pastry', 'butter', 'mushrooms', 'onion', 'sirloin', 'parsley', 'basil', 'salt', 'pepper', 'eggs', 'liver pate']" .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/278404> .
+<http://fit.fraunhofer.de/recipes/278404> <http://schema.org/recipeInstructions_raw> "['preheat oven at 350f', 'melt the butter and saute the mushrooms and onion', 'allow to cool', 'mix the sirloin with the mushrooms , onion , seasonings and eggs', 'roll out the pastry in 8 rectangles of 8\"x5\"', 'spread the pate in the center then add the filling', 'wrap the meat and seal the edges', 'brush with a little melted butter', 'bake for 1 hour , or until pastry is golden brown in colour']" .
+<http://fit.fraunhofer.de/recipes/512988> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/name> "Ground turkey   noodle paprikash" .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/identifier> "512988" .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/prepTime> "35"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/description> "remix of a beef noodle paprikash recipe to reduce calories and such..." .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/numberOfSteps> "17" .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetables> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-sodium> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/pasta-rice-and-grains> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords> <http://schema.org/recipes/tags/broccoli> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/keywords_raw> "['weeknight', '60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'main-dish', 'poultry', 'vegetables', 'easy', 'turkey', 'dietary', 'low-sodium', 'low-saturated-fat', 'low-calorie', 'low-carb', 'low-in-something', 'meat', 'pasta-rice-and-grains', 'broccoli']" .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/512988> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/512988> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/recipeIngredients_raw> "['olive oil', 'ground turkey', 'garlic', 'onion', 'paprika', 'thyme', 'nonfat beef broth', 'medium egg noodles', 'fat free sour cream', 'flour', 'broccoli florets']" .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/512988> .
+<http://fit.fraunhofer.de/recipes/512988> <http://schema.org/recipeInstructions_raw> "['1', 'in dutch oven , saute onions & garlic', 'add ground turkey and scramble until no longer pink', '2', 'drain excess fat', '3', 'stir in paprika and thyme', '4', 'add broth and uncooked noodles , bring to a boil', '5', 'reduce heat and simmer for 10 minutes , stirring occasionally', '6', 'mix sour cream with flour then stir into noodle mixture', '7', 'simmer for an additional 3 minutes , stirring until thickened', '8', 'serve over steamed broccoli']" .
+<http://fit.fraunhofer.de/recipes/137067> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/name> "Ground turkey   rice" .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/identifier> "137067" .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/prepTime> "45"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/description> "my family was tired of the usual chicken & rice dish that i make so i came up with this one dish meal that's easy to throw together. they like this more than the chicken & rice.\n\nif you like more rice you can increase it by another 1/2 cup.  you could even experiment using other vegetables i.e., frozen corn niblets, peas, green beans, etc." .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/numberOfSteps> "10" .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'preparation', 'main-dish', 'easy', 'one-dish-meal', '3-steps-or-less']" .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/137067> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/137067> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'fennel seed', \"lawry's seasoned salt\", 'long grain rice', 'celery', 'green pepper', 'carrots', 'onion', 'chicken broth', 'vegetable oil cooking spray']" .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/137067> .
+<http://fit.fraunhofer.de/recipes/137067> <http://schema.org/recipeInstructions_raw> "['sprinkle the seasoned salt and fennel seed over the ground turkey', 'mix well', 'spray large skillet with vegetable spray and place turkey mixture in pan', 'over medium-high heat cook and stir turkey until browned', 'drain well', 'while the turkey is draining add the vegetables to the hot pan and saute for about 5 minutes', 'add the turkey back into the pan and mix', 'sprinkle rice over mixture and pour in chicken broth', 'when broth comes to a boil reduce heat , cover and simmer for approx 20-30 minutes , stirring occasionally until liquid is absorbed', 'when the rice is cooked if there is still too much liquid in the pan remove cover , increase the heat and continue cooking until all liquid is absorbed']" .
+<http://fit.fraunhofer.de/recipes/79367> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/name> "Ground turkey   vegetable soup" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/identifier> "79367" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/prepTime> "80"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/description> "had some ground turkey i need to use. this is the result.  some may say this is more like a stew. very good & warming on a cold day" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/numberOfSteps> "10" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/soups-stews> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/keywords_raw> "['time-to-make', 'course', 'main-ingredient', 'preparation', 'soups-stews', 'poultry', 'turkey', 'meat', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/79367> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/79367> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'onion', 'tomato juice', 'beef broth', 'red potatoes', 'carrots', 'celery', 'white beans', 'diced tomatoes', 'garlic powder', 'dried oregano', 'dried basil', 'old bay seasoning', 'bay leaves', 'worcestershire sauce', 'cheese']" .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/79367> .
+<http://fit.fraunhofer.de/recipes/79367> <http://schema.org/recipeInstructions_raw> "['brown turkey in a large saucepan', 'drain', 'add onion , carrots , celery', 'saut about 5 minutes add tomato juice , beans , broth diced tomatoes and spices', 'bring to a boil and then reduce heat', 'simmer covered 45 minutes to 1 hour or until vegetables are tender', 'add worcestershire sauce and simmer another 5 minutes', 'put in bowls', 'sprinkle with cheese', 'serves 6']" .
+<http://fit.fraunhofer.de/recipes/191547> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/name> "Ground turkey and barley casserole" .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/identifier> "191547" .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/prepTime> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/description> "healthy comfort food." .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/numberOfSteps> "5" .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/casseroles> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/grains> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/pasta-rice-and-grains> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'main-ingredient', 'preparation', 'casseroles', 'poultry', 'oven', 'grains', 'turkey', 'dietary', 'meat', 'pasta-rice-and-grains', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/191547> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/191547> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'onion', 'celery', 'bell pepper', 'quick-cooking barley', 'tomato paste', 'beef broth', 'water', 'salt', 'pepper']" .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/191547> .
+<http://fit.fraunhofer.de/recipes/191547> <http://schema.org/recipeInstructions_raw> "['brown the turkey and vegetables in a large skillet', 'drain and return to skillet', 'add tomato paste , beef broth , water , salt and pepper', 'bring to a boil , then simmer for 20 minutes or until the barley is done', 'you may need to add more water if it appears too dry']" .
+<http://fit.fraunhofer.de/recipes/378109> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/name> "Ground turkey and barley vegetable soup" .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/identifier> "378109" .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/prepTime> "90"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/description> "an easy recipe from publix greenwise market.  unlike many other dried legumes, split peas do not need to be presoaked before use." .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/numberOfSteps> "12" .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/danish> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/scandinavian> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/european> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/keywords_raw> "['danish', 'time-to-make', 'cuisine', 'preparation', 'scandinavian', 'easy', 'european', '3-steps-or-less', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/378109> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/378109> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/recipeIngredients_raw> "['nonstick cooking spray', 'ground turkey', 'water', 'no-salt-added diced tomatoes', 'juice', 'quick-cooking barley', 'dried split peas', 'salt', 'dried oregano', 'dried basil', 'ground black pepper', 'bay leaf', 'celery & leaves']" .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/378109> .
+<http://fit.fraunhofer.de/recipes/378109> <http://schema.org/recipeInstructions_raw> "['lightly coat a 4-quart dutch oven or pot with cooking spray', 'heat over medium heat', 'cook ground turkey in hot dutch oven about 5 minutes or until no longer pink , stirring occasionally', 'drain off any fat', 'stir in water , undrained tomatoes , v8 juice , barley , split peas , salt , oregano , basil , black pepper and bay leaf', 'bring to a boil', 'reduce heat', 'simmer , covered , for 30 minutes', 'stir celery into soup mixture', 'simmer , covered , for 30 minutes more or until celery and barley are tender', 'remove and discard bay leaf', 'makes']" .
+<http://fit.fraunhofer.de/recipes/67134> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/name> "Ground turkey and black bean salad toss" .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/identifier> "67134" .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/prepTime> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/description> "this amount should feed four twice i think. you may add more beans if you prefer, but you will then probably need to double the spices. this is an sbd style salad." .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/numberOfSteps> "7" .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/30-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/salads> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/beans> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/american> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-sodium> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/black-beans> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/keywords_raw> "['30-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'north-american', 'main-dish', 'salads', 'beans', 'poultry', 'american', 'turkey', 'stove-top', 'dietary', 'one-dish-meal', 'low-sodium', 'low-cholesterol', 'low-calorie', 'low-carb', 'black-beans', 'healthy-2', 'low-in-something', 'meat', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/67134> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/67134> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'black beans', 'bell peppers', 'yellow onions', 'minced  fresh garlic cloves', 'picante sauce', 'dried basil', 'dried dill', 'dried oregano', 'cayenne pepper', 'cardamom', 'turmeric', 'olive oil', 'hot sauce', 'salad greens', 'low-fat sour cream', 'low-fat cheddar cheese']" .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/67134> .
+<http://fit.fraunhofer.de/recipes/67134> <http://schema.org/recipeInstructions_raw> "['saute all the veggies and spices together', 'add the turkey and cook until it browns and gives up the fat', 'drain it thoroughly !', 'return to pan or pot , add the salsa and the black beans', 'cook until really hot', 'add salt and pepper , and hot sauce if desired', 'serve over mixed salad greens with a tablespoon of low-fat sour cream and / or shredded low-fat cheddar cheese']" .
+<http://fit.fraunhofer.de/recipes/185009> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/name> "Ground turkey and corn casserole" .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/identifier> "185009" .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/prepTime> "45"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/description> "this is very tasty! it originally called for ground beef and lots more cheese, but we liked it with ground turkey breast." .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/numberOfSteps> "9" .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/casseroles> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'casseroles', 'main-dish', 'poultry', 'oven', 'turkey', 'meat', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/185009> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/185009> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/recipeIngredients_raw> "['ground turkey breast', 'salt', 'chili powder', 'reduced-fat cheddar cheese', 'barbecue sauce', 'mexicorn whole kernel corn', 'tomato sauce', 'flour', 'yellow cornmeal', 'sugar', 'baking powder', 'light butter', 'skim milk', 'egg']" .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/185009> .
+<http://fit.fraunhofer.de/recipes/185009> <http://schema.org/recipeInstructions_raw> "['brown ground turkey breast', 'drain', 'stir in salt through tomato sauce and set aside', 'to make the crust , stir together flour , cornmeal , sugar , tsp salt , and baking powder', 'cut in butter', 'blend in 1 / 2 cup of cheese , milk , and egg', 'spread crust mixture over the bottom & sides of nonstick 9-inch square baking pan or glass pie plate', 'pour filling into crust', 'bake at 400 degrees for 25-30 minutes']" .
+<http://fit.fraunhofer.de/recipes/399988> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/name> "Ground turkey and eggplant casserole" .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/identifier> "399988" .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/prepTime> "75"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/description> "i don't remember where i got this recipe. it was originally made with beef. family loves this one." .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/numberOfSteps> "6" .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/keywords_raw> "['time-to-make', 'course', 'main-ingredient', 'preparation', 'healthy', 'main-dish', 'poultry', 'dietary', 'one-dish-meal', 'low-cholesterol', 'low-saturated-fat', 'low-calorie', 'low-carb', 'healthy-2', 'low-in-something', 'meat', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/399988> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/399988> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'olive oil', 'eggplant', 'elbow macaroni', 'water', 'garlic clove', 'salt', 'oregano', 'ground pepper', 'tomatoes', 'onions', 'green pepper', 'parmesan cheese']" .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/399988> .
+<http://fit.fraunhofer.de/recipes/399988> <http://schema.org/recipeInstructions_raw> "['cook turkey in skillet with olive oil until no longer pink', 'put into large casserole dish', 'stir in eggplant , elbows , water , garlic , salt , oregano , and pepper', 'top with tomatoes , onions , and green pepper', 'cover and cook at 350 for 50-60 minutes', 'stir and sprinkle with parmesian cheese']" .
+<http://fit.fraunhofer.de/recipes/230317> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/name> "Ground turkey and hominy" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/identifier> "230317" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/prepTime> "20"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/description> "this is from weeknight cooking made easy.  i haven't made it yet but it sounds simple and tasty - two of my prerequisites!" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/numberOfSteps> "4" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/30-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/beef> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetables> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/ground-beef> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/keywords_raw> "['30-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'main-dish', 'beef', 'vegetables', 'easy', 'dietary', 'one-dish-meal', 'low-cholesterol', 'low-saturated-fat', 'low-calorie', 'low-carb', 'healthy-2', 'ground-beef', 'low-in-something', 'meat']" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/230317> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/230317> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'onion', 'garlic', 'olive oil', 'tomatoes', 'chili powder', 'ground cumin', 'salt', 'ground mustard', 'dried thyme', 'ground cinnamon', 'ground allspice', 'ground pepper', 'hominy']" .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/230317> .
+<http://fit.fraunhofer.de/recipes/230317> <http://schema.org/recipeInstructions_raw> "['cook the turkey , onion and garlic in oil until meat is no longer pink', 'drain', 'stir in the tomatoes and seasonings and heat through', 'add hominy and heat through']" .
+<http://fit.fraunhofer.de/recipes/486780> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/name> "Ground turkey and rice soup" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/identifier> "486780" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/prepTime> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/description> "i came up with this recipe by simply wanting a yummy, healthy soup with what i had in my fridge... added a little of this and that... and now i make it all the time!" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/numberOfSteps> "11" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/30-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/soups-stews> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/american> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-fat> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/inexpensive> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords> <http://schema.org/recipes/tags/pasta-rice-and-grains> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/keywords_raw> "['30-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'north-american', 'healthy', 'soups-stews', 'poultry', 'american', 'easy', 'low-fat', 'dietary', 'low-cholesterol', 'low-saturated-fat', 'low-calorie', 'inexpensive', 'healthy-2', 'low-in-something', 'meat', 'pasta-rice-and-grains']" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/486780> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/486780> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'rice', 'carrots', 'celery ribs', 'onion', 'bell pepper', 'green chilies', 'chicken stock', 'water', 'knorr chicken bouillon', 'pepper', 'season salt', 'cumin', 'chili powder', 'minced garlic clove']" .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/486780> .
+<http://fit.fraunhofer.de/recipes/486780> <http://schema.org/recipeInstructions_raw> "['chop up all vegetables', 'saute ground turkey in the pot sprayed with pam', 'spice turkey with season salt , pepper , cumin , garlic , and a little chili powder', 'begin to brown', 'add vegetables and saute for 2 - 3 minutes', 'add can of green chiles and saute another 2 - 3 minutes', 'add 4 cups of chicken stock and 4 cups of water , and bouillon , and bring to a boil', 'once boiling , add rice', 'add a little more seasonings if desired', 'bring back to a boil , and then simmer for approximately 20 minutes or until the rice is tender', 'remove from heat and enjoy !']" .
+<http://fit.fraunhofer.de/recipes/27497> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/name> "Ground turkey and veggie soup" .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/identifier> "27497" .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/prepTime> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/description> "a quick and easy hearty soup. good with crusty bread." .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/numberOfSteps> "3" .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/lunch> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/soups-stews> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetables> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/beginner-cook> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/dinner-party> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-fat> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-sodium> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'healthy', 'lunch', 'soups-stews', 'poultry', 'vegetables', 'easy', 'beginner-cook', 'dinner-party', 'low-fat', 'stove-top', 'dietary', 'low-sodium', 'low-cholesterol', 'low-saturated-fat', 'low-calorie', 'low-carb', 'healthy-2', 'low-in-something', 'meat', 'equipment', '3-steps-or-less']" .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/27497> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/27497> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'onion', 'green pepper', 'green beans', 'potatoes', 'stewed tomatoes', 'tomato soup', 'salt', 'pepper']" .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/27497> .
+<http://fit.fraunhofer.de/recipes/27497> <http://schema.org/recipeInstructions_raw> "['brown turkey in dutch oven until cooked through', 'add all other ingredients', 'heat until warmed through , about 15 minutes']" .
+<http://fit.fraunhofer.de/recipes/71196> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/name> "Ground turkey and white bean chili" .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/identifier> "71196" .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/prepTime> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/description> "this delicious recipe is easy to prepare and very satisfying. it's also great for my south beach diet. it's based on a recipe in martha stewart's every day food magazine, but slightly modified." .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/numberOfSteps> "9" .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/beans> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/chili> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'main-dish', 'beans', 'poultry', 'chili', 'turkey', 'stove-top', 'dietary', 'one-dish-meal', 'low-cholesterol', 'low-saturated-fat', 'low-calorie', 'low-carb', 'healthy-2', 'low-in-something', 'meat', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/71196> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/71196> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/recipeIngredients_raw> "['canola oil', 'ground turkey', 'salt and pepper', 'onion', 'jalapenos', 'ground cumin', 'tomato sauce', 'cannellini beans', 'chicken broth', 'water', 'cilantro', 'light sour cream']" .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/71196> .
+<http://fit.fraunhofer.de/recipes/71196> <http://schema.org/recipeInstructions_raw> "['heat canola oil in a dutch oven or deep skillet over medium high heat', 'add ground turkey and season with salt and pepper', 'cook until browned , stirring to break up turkey', 'add chopped onion and minced jalapeno and cook until soft , about 3 minutes', 'stir in ground cumin and tomato sauce and cook for 2 more minutes', 'add the cannellini beans , the broth and the water', 'bring to a boil', 'reduce heat and simmer until thicker , about 20 minutes', 'ladle into bowls and place a dollop of light sour cream and a sprinkling of chopped cilantro on top of each serving']" .
+<http://fit.fraunhofer.de/recipes/185175> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/name> "Ground turkey and white bean chili bake" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/identifier> "185175" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/prepTime> "140"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/description> "don't omit the hersey's cocoa and cinnamon, it makes this recipe! this is even better if made a day ahead, the flavors really intensify! this can also be made on top of the stove. serve this with crusty buns!" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/numberOfSteps> "13" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/beans> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetables> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/oven> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/beginner-cook> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/dinner-party> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/holiday-event> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/chili> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/spicy> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/comfort-food> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/inexpensive> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/keywords_raw> "['time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'healthy', 'main-dish', 'beans', 'poultry', 'vegetables', 'oven', 'easy', 'beginner-cook', 'dinner-party', 'holiday-event', 'chili', 'turkey', 'stove-top', 'dietary', 'spicy', 'low-cholesterol', 'low-calorie', 'comfort-food', 'inexpensive', 'healthy-2', 'low-in-something', 'meat', 'taste-mood', 'equipment', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/185175> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/185175> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/recipeIngredients_raw> "['oil', 'onions', 'fresh garlic', 'dried chili pepper flakes', 'jalapeno pepper', 'dried oregano', 'cumin', 'chili powder', 'tomato paste', 'ground turkey', 'bay leaf', 'dark cocoa', 'cinnamon', 'diced tomatoes', 'tomato sauce', 'small white beans', 'beef broth', 'dark beer', 'salt and pepper', 'old cheddar cheese']" .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/185175> .
+<http://fit.fraunhofer.de/recipes/185175> <http://schema.org/recipeInstructions_raw> "['heat oil in a dutch oven over medium heat', 'add in onions and saute for 8-10 minutes or until lightly browned', 'add in the oregano , cumin and chili powder , chili flakes and jalapeno pepper cook for 1-2 minutes', 'add in tomato paste and stir for 1 minute', 'add in ground turkey', 'cook until no longer pink', 'stir in bay leaf and cocoa powder , then add in undrained diced tomatoes , tomato sauce , beef broth and beer', 'bring to a boil and simmer on top of the stove for about 15 minutes , stirring occasionally , then season with salt and pepper', 'set oven to 325 degrees', 'place in oven uncovered , and cook for about 1 hour , stirring occasionally', 'after 1 hour cooking add in drained beans , and season with more salt if desired', 'return to oven and cook uncovered for another 35-40 minutes', 'sprinkle the cheddar cheese on top the last 5-6 minutes of cooking time']" .
+<http://fit.fraunhofer.de/recipes/477053> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/name> "Ground turkey bolognese sause  my rendition of it  anyway" .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/identifier> "477053" .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/prepTime> "50"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/description> "this is an easy pasta sauce to throw together on a weeknight. it's healthy, tasty and tastes just as good on french bread as it does on your favorite pasta." .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/numberOfSteps> "11" .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/weeknight> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/pasta> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/european> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/italian> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/pasta-rice-and-grains> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/penne> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/keywords_raw> "['weeknight', '60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'main-dish', 'pasta', 'easy', 'european', 'italian', 'pasta-rice-and-grains', 'penne', '3-steps-or-less']" .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/477053> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/477053> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/recipeIngredients_raw> "['whole tomatoes', 'tomato paste', 'garlic cloves', 'sliced mushrooms', 'ground turkey', 'olive oil', 'salt and pepper', 'italian seasoning', 'pasta']" .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/477053> .
+<http://fit.fraunhofer.de/recipes/477053> <http://schema.org/recipeInstructions_raw> "['over medium heat , place olive oil in heavy pan to heat', 'add ground turkey and cook through , crumbling as you go', 'once the turkey is no longer pink , add garlic and cook for 3 minutes , stirring , so as to not burn the garlic', 'add the two packages of mushrooms , breaking up any larger pieces- cook for 10 minutes', 'this is a good time to get your pasta water boiling', 'add the can of whole tomatoes to the turkey and mushrooms and crush in the pan', 'add the can of tomato paste and the italian seasoning', 'stir it up and pop on the lid', 'reduce the heat to low and let simmer for about 30 minutes- stirring occasionally', 'flavor with salt and pepper to your liking and let it simmer for an additional 10 minutes or so without the lid on', 'enjoy !']" .
+<http://fit.fraunhofer.de/recipes/237021> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/name> "Ground turkey cabbage joes" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/identifier> "237021" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/prepTime> "30"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/description> "adapted from an allrecipes.com recipe.  my version is a bit healthier, using ground turkey, unsweetened ketchup and sugar substitute.  you can certainly substitute beef and real sugar and it would be just as tasty.  we like a sweeter sloppy so i usually add more sweetener for us.  enjoy in good health!" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/numberOfSteps> "6" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/30-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords> <http://schema.org/recipes/tags/3-steps-or-less> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/keywords_raw> "['30-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'preparation', 'main-dish', 'poultry', 'easy', 'turkey', 'meat', '3-steps-or-less']" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/237021> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/237021> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/recipeIngredients_raw> "['lean ground turkey', 'green pepper', 'green cabbage', 'onion', 'celery rib', 'unsweetened ketchup', 'brown sugar substitute', 'lemon juice', 'white wine vinegar', 'worcestershire sauce', 'yellow mustard', 'salt', 'hamburger bun']" .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/237021> .
+<http://fit.fraunhofer.de/recipes/237021> <http://schema.org/recipeInstructions_raw> "['spray treat a large non-stick skillet', 'add turkey and vegetables', 'cook over medium heat until meat is cooked through and vegetables are starting to tender', 'in a small bowl , stir together the remaining ingredients', 'stir into the turkey and vegetables , mixing well', 'cover and simmer for about 10 minutes']" .
+<http://fit.fraunhofer.de/recipes/298245> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/name> "Ground turkey casserole" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/identifier> "298245" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/prepTime> "65"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/description> "i found this on another site, and plan on making it this week, so i'm posting it here so i don't lose it. i'll update after i make it. =]" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/numberOfSteps> "9" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/kid-friendly> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/inexpensive> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/savory> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/presentation> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/served-hot> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords> <http://schema.org/recipes/tags/4-hours-or-less> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/keywords_raw> "['time-to-make', 'course', 'main-ingredient', 'preparation', 'occasion', 'main-dish', 'poultry', 'easy', 'kid-friendly', 'turkey', 'dietary', 'one-dish-meal', 'inexpensive', 'meat', 'taste-mood', 'savory', 'presentation', 'served-hot', '4-hours-or-less']" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/298245> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/298245> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'tomato sauce', 'white sugar', 'sour cream', 'cream cheese', 'egg noodles', 'cheddar cheese']" .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/298245> .
+<http://fit.fraunhofer.de/recipes/298245> <http://schema.org/recipeInstructions_raw> "['preheat oven to 350 degrees f', 'in a large skillet over medium-high heat , saute the ground turkey for 5 to 10 minutes , or until browned', 'drain the turkey , stir in the tomato sauce and sugar , and set aside', 'in a medium bowl , combine the sour cream and cream cheese', 'mix well and set aside', 'cook noodles according to package directions', 'place them into a 9x13-inch baking dish , then layer the turkey mixture over the noodles', 'then layer the sour cream mixture over the turkey , and top with cheese', 'bake at 350 degrees f for 20 to 35 minutes , or until cheese is melted and bubbly']" .
+<http://fit.fraunhofer.de/recipes/81494> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/name> "Ground turkey chili" .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/identifier> "81494" .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/prepTime> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/description> "a healthier alternative to regular chili. this chili is economical and freezes well. i threw it together with things i already had in my kitchen after ground turkey went on sale at the store." .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/numberOfSteps> "11" .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/lunch> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/beans> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/vegetables> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/american> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/southwestern-united-states> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/easy> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/beginner-cook> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/fall> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/holiday-event> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-fat> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/winter> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/chili> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/food-processor-blender> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/spicy> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/one-dish-meal> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-cholesterol> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/seasonal> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-saturated-fat> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-calorie> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/comfort-food> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/oamc-freezer-make-ahead> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-carb> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/inexpensive> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/black-beans> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/healthy-2> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/low-in-something> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/corn> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/onions> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/super-bowl> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/savory> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/small-appliance> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/number-of-servings> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/presentation> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords> <http://schema.org/recipes/tags/served-hot> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'healthy', 'lunch', 'main-dish', 'beans', 'poultry', 'vegetables', 'american', 'southwestern-united-states', 'easy', 'beginner-cook', 'fall', 'holiday-event', 'low-fat', 'winter', 'chili', 'turkey', 'food-processor-blender', 'stove-top', 'dietary', 'spicy', 'one-dish-meal', 'low-cholesterol', 'seasonal', 'low-saturated-fat', 'low-calorie', 'comfort-food', 'oamc-freezer-make-ahead', 'low-carb', 'inexpensive', 'black-beans', 'healthy-2', 'low-in-something', 'meat', 'corn', 'onions', 'super-bowl', 'taste-mood', 'savory', 'equipment', 'small-appliance', 'number-of-servings', 'presentation', 'served-hot']" .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/81494> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/81494> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/recipeIngredients_raw> "['yellow onion', 'garlic', 'ground turkey', 'diced tomatoes with mild green chilies', 'ground cumin', 'chili powder', 'dried oregano', 'ground cinnamon', 'light brown sugar', 'ground cayenne pepper', 'fresh ground black pepper', 'black beans', 'whole kernel corn', 'cannellini beans', 'fat-free low-sodium chicken broth', 'hot sauce']" .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/81494> .
+<http://fit.fraunhofer.de/recipes/81494> <http://schema.org/recipeInstructions_raw> "['in a large pot over medium heat saute the onion , garlic and ground turkey until turkey is browned', 'add tomatoes , pepper , cumin , chili powder , oregano , cinnamon , brown sugar and cayenne pepper', 'saute for 5 more minutes', 'add black beans , corn and chicken broth to the pot', 'puree cannellini beans in a blender or food processor', 'add puree to the pot', 'stir well and simmer for 10 minutes', 'if the turkey mixture seems dry when browning , add a splash of olive oil', 'the spice measurements are approximate', 'if you want more or less heat , adjust the cayenne and the hot sauce', 'if desired , garnish with sour cream , shredded cheese or green onions']" .
+<http://fit.fraunhofer.de/recipes/79308> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://schema.org/Recipe> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/name> "Ground turkey chili for people who hate ground turkey" .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/identifier> "79308" .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/prepTime> "40"^^<http://www.w3.org/2001/XMLSchema#int> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/description> "i totally hated ground turkey until i tried this recipe. people don't even know ground turkey is in it; until you tell them;so don't.this chili is mild so any one can eat it." .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/numberOfSteps> "4" .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/60-minutes-or-less> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/time-to-make> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/course> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-ingredient> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/cuisine> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/preparation> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/occasion> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/north-american> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/main-dish> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/poultry> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/chili> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/turkey> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/stove-top> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/dietary> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/comfort-food> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/meat> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/taste-mood> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords> <http://schema.org/recipes/tags/equipment> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/keywords_raw> "['60-minutes-or-less', 'time-to-make', 'course', 'main-ingredient', 'cuisine', 'preparation', 'occasion', 'north-american', 'main-dish', 'poultry', 'chili', 'turkey', 'stove-top', 'dietary', 'comfort-food', 'meat', 'taste-mood', 'equipment']" .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/nutrition> <http://fit.fraunhofer.de/recipes/nutrition/79308> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/recipeIngredients> <http://fit.fraunhofer.de/recipes/ingredients/79308> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/recipeIngredients_raw> "['ground turkey', 'onion', 'green pepper', 'red kidney beans', 'stewed tomatoes', 'tomato paste', 'chili powder', 'garlic powder', 'oregano', 'cumin', 'paprika', 'black pepper', 'salt', 'water']" .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/recipeInstructions> <http://fit.fraunhofer.de/recipes/instructions/79308> .
+<http://fit.fraunhofer.de/recipes/79308> <http://schema.org/recipeInstructions_raw> "['over medium heat spray a large dutch oven with non stick cooking spray', 'saute ground turkey , green pepper , and onion until lightly browned and onion and pepper are soft', 'add the remaining ingredients plus the water and stir well', 'cook over medium heat for 30 minutes']" .
+
