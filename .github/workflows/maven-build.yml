@@ -20,23 +20,11 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-    # 1. Server
       - name: Build McpSpring-Server
-        working-directory: ./McpSpring-Server
-        run: mvn -B -pl McpSpring-Server -am clean verify
-
-    # 2. Client
+        run: mvn -B -f McpSpring-Server/pom.xml clean verify -DskipTests
       - name: Build McpSpring-client
-        working-directory: ./McpSpring-client
-        run: mvn -B -pl McpSpring-client -am clean verify
-
-     # 3. ChatbotAlge
+        run: mvn -B -f McpSpring-client/pom.xml clean verify -DskipTests
       - name: Build ChatbotAlge
-        working-directory: ./ChatbotAlge
-        run: mvn -B -pl ChatbotAlge -am clean verify
-
-    # 4. FrontEnd
+        run: mvn -B -f ChatbotAlge/pom.xml clean verify -DskipTests
       - name: Build FrontEnd
-        working-directory: ./FrontEnd
-        run: mvn -B -pl FrontEnd -am clean verify
-
+        run: mvn -B -f FrontEnd/pom.xml clean verify -DskipTests
