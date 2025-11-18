@@ -1,5 +1,5 @@
 package org.example.chatbotalge;
 
-public class tst {
+public class tster {
 
 }
