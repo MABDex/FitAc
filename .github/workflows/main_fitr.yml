@@ -1,4 +1,3 @@
-# Build & Deploy Multi-Modul-Java-App (mit FrontEnd) nach Azure Web App FITR
 
 name: Build and deploy JAR app to Azure Web App - FITR
 
@@ -12,10 +11,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     permissions:
-      contents: read # required for actions/checkout
+      contents: read
 
     steps:
-      - name: Check out the repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -25,58 +24,23 @@ jobs:
           distribution: 'microsoft'
           cache: maven
 
-      # --------- 1) Server (reines Java) ----------
-      - name: Build McpSpring-Server
-        run: mvn -B -f McpSpring-Server/pom.xml clean verify -DskipTests
+      # Baut alle Module über das Root-pom (ChatbotAlge, FrontEnd, Client, Server)
+      - name: Build all modules
+        run: mvn -B clean package -DskipTests
 
-      # --------- 2) ChatbotAlge (reines Java) -------
-      - name: Build ChatbotAlge
-        run: mvn -B -f ChatbotAlge/pom.xml clean verify -DskipTests
-
-      # --------- 3) McpSpring-client (Vaadin/Vite) ----------
-      - name: Set up Node.js for McpSpring-client
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: 'McpSpring-client/package-lock.json'
-
-      - name: Install McpSpring-client frontend deps
-        working-directory: ./McpSpring-client
-        run: npm ci
-
-      - name: Build McpSpring-client
-        run: mvn -B -f McpSpring-client/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
-
-      # --------- 4) FrontEnd (Vaadin/Vite) ------- 
-      - name: Set up Node.js for FrontEnd
-        uses: actions/setup-node@v4
-        with:
-          node-version: '20'
-          cache: 'npm'
-          cache-dependency-path: 'FrontEnd/package-lock.json'
-
-      - name: Install FrontEnd frontend deps
-        working-directory: ./FrontEnd
-        run: npm ci
-
-      - name: Build FrontEnd
-        run: mvn -B -f FrontEnd/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
-
-      # --------- 5) JAR für Azure bereitstellen (aus FrontEnd) -------
-      - name: Upload artifact for deployment job
+      # Nur das FrontEnd-JAR für den Deploy-Job hochladen
+      - name: Upload FrontEnd jar for deployment
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          # HIER das JAR, das auf Azure laufen soll:
-          path: 'FrontEnd/target/*.jar'
+          path: 'FrontEnd/target/FrontEnd-0.0.1-SNAPSHOT.jar'
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
     permissions:
-      id-token: write   # required for requesting the JWT
-      contents: read    # required for actions/checkout
+      id-token: write
+      contents: read
 
     steps:
       - name: Download artifact from build job
@@ -97,4 +61,4 @@ jobs:
         with:
           app-name: 'FITR'
           slot-name: 'Production'
-          package: '*.jar'
+          package: 'FrontEnd-0.0.1-SNAPSHOT.jar'
