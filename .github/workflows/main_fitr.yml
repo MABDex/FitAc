@@ -1,20 +1,21 @@
-name: Java CI with Maven
+name: Build and deploy JAR apps to Azure Web App - FITR
 
 on:
-  pull_request:
-    branches:
-      - main
   push:
     branches:
       - main
-  workflow_dispatch:
+  pull_request:
+    branches:
+      - main
 
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      contents: read
 
     steps:
-      - name: Check out the repository
+      - name: Check out repository
         uses: actions/checkout@v4
 
       - name: Set up JDK 17
@@ -24,16 +25,16 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      # --------- 1) Zuerst: Server (reines Java) ----------
+      # 1) McpSpring-Server bauen
       - name: Build McpSpring-Server
         run: mvn -B -f McpSpring-Server/pom.xml clean verify -DskipTests
 
-      # --------- 2) Dann: ChatbotAlge (reines Java) -------
+      # 2) ChatbotAlge bauen
       - name: Build ChatbotAlge
         run: mvn -B -f ChatbotAlge/pom.xml clean verify -DskipTests
 
-      # --------- 3) Danach: Client (Vaadin/Vite) ----------
-      - name: Set up Node.js for client
+      # 3) McpSpring-client (Vaadin) bauen
+      - name: Set up Node.js for McpSpring-client
         uses: actions/setup-node@v4
         with:
           node-version: '20'
@@ -47,7 +48,7 @@ jobs:
       - name: Build McpSpring-client
         run: mvn -B -f McpSpring-client/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
 
-      # --------- 4) Zuletzt: FrontEnd (Vaadin/Vite) -------
+      # 4) FrontEnd (Vaadin) bauen
       - name: Set up Node.js for FrontEnd
         uses: actions/setup-node@v4
         with:
@@ -62,17 +63,26 @@ jobs:
       - name: Build FrontEnd
         run: mvn -B -f FrontEnd/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
 
-      # --------- 5) FrontEnd-JAR für Deployment speichern -------
-      - name: Upload FrontEnd jar for deployment
+      # 5) Alle JARs in deploy-Ordner kopieren
+      - name: Prepare deployment folder
+        run: |
+          mkdir deploy
+          cp McpSpring-Server/target/McpSpring-Server-0.0.1-SNAPSHOT.jar deploy/
+          cp McpSpring-client/target/McpSpring-client-0.0.1-SNAPSHOT.jar deploy/
+          cp ChatbotAlge/target/ChatbotAlge-0.0.1-SNAPSHOT.jar deploy/
+          cp FrontEnd/target/FrontEnd-0.0.1-SNAPSHOT.jar deploy/
+
+      # 6) Artefakt hochladen
+      - name: Upload app artifacts for deployment
         uses: actions/upload-artifact@v4
         with:
           name: java-app
-          path: 'FrontEnd/target/FrontEnd-0.0.1-SNAPSHOT.jar'
+          path: deploy
 
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    # nur bei push auf main deployen, nicht bei pull_request
+    # nur bei push (nicht bei PR) deployen
     if: github.event_name == 'push'
     permissions:
       id-token: write
@@ -83,7 +93,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: java-app
-          path: .
+          path: ./deploy
 
       - name: Login to Azure
         uses: azure/login@v2
@@ -97,4 +107,4 @@ jobs:
         with:
           app-name: 'FITR'
           slot-name: 'Production'
-          package: 'FrontEnd-0.0.1-SNAPSHOT.jar'
+          package: './deploy'
