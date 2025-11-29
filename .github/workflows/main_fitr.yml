@@ -1,10 +1,7 @@
-name: Build and deploy JAR apps to Azure Web App - FITR
+name: Build and deploy FITR to Azure Web App
 
 on:
   push:
-    branches:
-      - main
-  pull_request:
     branches:
       - main
 
@@ -33,7 +30,7 @@ jobs:
       - name: Build ChatbotAlge
         run: mvn -B -f ChatbotAlge/pom.xml clean verify -DskipTests
 
-      # 3) McpSpring-client (Vaadin) bauen
+      # 3) McpSpring-client bauen
       - name: Set up Node.js for McpSpring-client
         uses: actions/setup-node@v4
         with:
@@ -41,14 +38,14 @@ jobs:
           cache: 'npm'
           cache-dependency-path: 'McpSpring-client/package-lock.json'
 
-      - name: Install client frontend deps
+      - name: Install McpSpring-client frontend deps
         working-directory: ./McpSpring-client
         run: npm ci
 
       - name: Build McpSpring-client
         run: mvn -B -f McpSpring-client/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
 
-      # 4) FrontEnd (Vaadin) bauen
+      # 4) FrontEnd bauen
       - name: Set up Node.js for FrontEnd
         uses: actions/setup-node@v4
         with:
@@ -63,7 +60,7 @@ jobs:
       - name: Build FrontEnd
         run: mvn -B -f FrontEnd/pom.xml clean verify -DskipTests -Dvaadin.ignoreVersionChecks=true
 
-      # 5) Alle JARs in deploy-Ordner kopieren
+      # 5) Deploy-Ordner vorbereiten (4 JARs + startup.sh)
       - name: Prepare deployment folder
         run: |
           mkdir deploy
@@ -71,9 +68,10 @@ jobs:
           cp McpSpring-client/target/McpSpring-client-0.0.1-SNAPSHOT.jar deploy/
           cp ChatbotAlge/target/ChatbotAlge-0.0.1-SNAPSHOT.jar deploy/
           cp FrontEnd/target/FrontEnd-0.0.1-SNAPSHOT.jar deploy/
+          cp startup.sh deploy/
+          chmod +x deploy/startup.sh
 
-      # 6) Artefakt hochladen
-      - name: Upload app artifacts for deployment
+      - name: Upload app artifacts
         uses: actions/upload-artifact@v4
         with:
           name: java-app
@@ -82,7 +80,6 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
-    # nur bei push (nicht bei PR) deployen
     if: github.event_name == 'push'
     permissions:
       id-token: write
