@@ -1,3 +1,8 @@
+#!/bin/bash
+
+# in den Ordner wechseln, in dem dieses Script liegt
+cd "$(dirname "$0")"
+
 PORT=${PORT:-8080}
 
 echo "Starte McpSpring-Server auf Port 8081 ..."
