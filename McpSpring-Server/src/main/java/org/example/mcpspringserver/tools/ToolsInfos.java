@@ -45,7 +45,7 @@ public class ToolsInfos {
 
 
 
-    @Tool(description = "")
+    @Tool(description = "Executes a SPARQL query on the recipe RDF store")
     public ResponseEntity<String> response( String userQuestion) {
 
         String generatedQuery = queryAgent.generateSparql(userQuestion);
