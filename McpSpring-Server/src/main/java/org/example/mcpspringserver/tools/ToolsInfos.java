@@ -4,6 +4,8 @@ package org.example.mcpspringserver.tools;
 
 import org.example.mcpspringserver.entities.FragenHistory;
 import org.example.mcpspringserver.repository.IngredientPriceRepository;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.ai.tool.annotation.Tool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Lazy;
