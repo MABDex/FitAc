@@ -43,7 +43,7 @@ public class ToolsInfos {
 
 
 
-    @Tool(description = "")
+    @Tool(description = "Generates a SPARQL query from the user's question, sends it to the GraphDB endpoint, and returns the JSON response.")
     public ResponseEntity<String> response( String userQuestion) {
 
         String generatedQuery = queryAgent.generateSparql(userQuestion);
@@ -56,7 +56,7 @@ public class ToolsInfos {
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
-        String body = "query=" + generatedQuery;
+         String body = "query=" + URLEncoder.encode(generatedQuery, StandardCharsets.UTF_8);
         HttpEntity<String> request = new HttpEntity<>(body, headers);
 
         ResponseEntity<String> response = restTemplate.exchange(
