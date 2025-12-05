@@ -1,56 +1,59 @@
 package org.example.mcpspringclient.Agents;
 
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+import org.springframework.ai.chat.memory.MessageWindowChatMemory;
 import org.springframework.ai.tool.ToolCallbackProvider;
+import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.stereotype.Service;
 
 @Service
 public class AiAgent {
 
-    private final ChatClient chatClient;
 
-    public AiAgent(ChatClient.Builder chatClient, ToolCallbackProvider toolCallbackProvider) {
-
+    private ChatClient chatClient;
+                                                  // Object contient la Liste des Tools
+    public AiAgent(ChatClient.Builder chatClient , ToolCallbackProvider toolCallbackProvider) {
         this.chatClient = chatClient
                 .defaultToolCallbacks(toolCallbackProvider)
-                .defaultSystem("""
-                        You are an AI assistant that answers recipe questions using the MCP server.
-
-                        WORKFLOW:
-
-                        1) Translate the user's question into English if needed.
-                        2) Generate a SPARQL query (English only). DO NOT EXECUTE IT YOURSELF.
-                        3) ALWAYS call the tool "response" with that SPARQL query.
-                        4) After receiving the JSON results from the tool:
-                           - Read the JSON  
-                           - Explain the recipe in the user's language  
-                           - Always include:
-                               • recipe name  
-                               • description  
-                               • ingredients  
-                               • recipeIngredients  
-                               • recipeInstructions (text only)  
-                        5) If the user mentions price/cost:
-                           - Call getAllIngredients() tool  
-                           - Add prices to the answer
-                        6) If no results are found:
-                           - Answer politely that no recipe was found
-
-                        RULES:
-                        - NEVER invent data, only use tool results.
-                        - NEVER generate explanations unless after the tool returns JSON.
-                        - NEVER call tools repeatedly.
-                        - ALWAYS call "response" exactly once per question.
-                        """)
+                .defaultSystem( """
+                        You are an AI Assistant that answers user questions about recipes
+                        
+                         -Translate the user's question into English if necessary,
+                         -The SPARQL query has already been generated and executed by the MCP-server,
+                         -your task is to read the JSON results returned from the query,
+                         -Explain the answer to the user in natural language (same language as the user),Always include the following properties: 
+                           1) recipe name,
+                           2) description, 
+                           3) ingredients, 
+                           4) recipeIngredients , 
+                           5) recipeInstructions (strictly include the instructions as text, do NOT provide any links)
+                         
+                         
+                         -If the user asks about prices or costs of ingredients,you must include the price for every ingredient in each recipe. always use Only the provided database tools getAllIngredients() to fetch the actual prices from the database and include them in the answer.
+                         -If the user does not ask about prices, strictly do not include any price information.
+                         -If no results are found, politely inform the user do NOT generate SPARQL queries
+                         
+                         Important rules:
+                        - Always use the provided tools, do NOT invent answers without querying the data.
+                        - If no matching recipes are found, politely inform the user.
+                        - Include both the SPARQL query and the natural answer if the user might need it.
+                       
+                                    """ )
                 .build();
     }
 
-    public String askLLM(String query) {
-        return chatClient
-                .prompt()
+    public String askLLM(String query){
+        return chatClient.prompt()
                 .user(query)
                 .call()
                 .content();
     }
+
+
+
+
+
+
 }
