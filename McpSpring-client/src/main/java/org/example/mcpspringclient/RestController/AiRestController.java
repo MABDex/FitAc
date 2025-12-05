@@ -2,8 +2,6 @@ package org.example.mcpspringclient.RestController;
 
 
 import org.example.mcpspringclient.Agents.AiAgent;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,8 +13,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AiRestController {
 
     private AiAgent aiAgent;
-    private static final org.slf4j.Logger log =
-        org.slf4j.LoggerFactory.getLogger(AiRestController.class);
 
     public AiRestController(AiAgent aiAgent) {
         this.aiAgent = aiAgent;
@@ -27,7 +23,6 @@ public class AiRestController {
     @GetMapping(value = "/chat" , produces = MediaType.TEXT_PLAIN_VALUE)
     public ResponseEntity<String> chat(@RequestParam String query) {
         try {
-            log.info("Received /chat query='{}'", query);
             String answer = aiAgent.askLLM(query);
 
             // Optional: prüfen, ob die Antwort leer ist oder Fehler enthält
@@ -37,7 +32,6 @@ public class AiRestController {
 
             return ResponseEntity.ok( answer );
         } catch (Exception e) {
-            log.error("Error while handling /chat for query='{}'", query, e);
             // Generische Fehlerbehandlung
             return ResponseEntity.ok("{\"error\":\"Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.\"}");
         }
