@@ -1,7 +1,7 @@
 package org.example.mcpspringserver.tools;
 
-
-
+import java.net.URLEncoder;
+import java.nio.charset.StandardCharsets;
 import org.example.mcpspringserver.entities.FragenHistory;
 import org.example.mcpspringserver.repository.IngredientPriceRepository;
 import org.springframework.ai.tool.annotation.Tool;
