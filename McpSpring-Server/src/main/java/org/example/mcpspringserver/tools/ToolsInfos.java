@@ -36,34 +36,55 @@ public class ToolsInfos {
         this.queryAgent = queryAgent;
     }
 
+   // --- HIER IST DIE KORRIGIERTE METHODE ---
     @Tool(description = "Generates a SPARQL query from the user's question, sends it to GraphDB, and returns the JSON response.")
-    public ResponseEntity<String> response( String userQuestion) {
+    public String response(String userQuestion) {
 
-        String generatedQuery = queryAgent.generateSparql(userQuestion);
+        try {
+            // 1. SPARQL Query generieren
+            String generatedQuery = queryAgent.generateSparql(userQuestion);
 
-        if (generatedQuery == null || generatedQuery.isEmpty()) {
-            throw new IllegalStateException("SPARQL query is empty!");
+            if (generatedQuery == null || generatedQuery.isEmpty()) {
+                return "{\"error\": \"SPARQL query could not be generated.\"}";
+            }
+
+            // 2. HTTP Header vorbereiten
+            HttpHeaders headers = new HttpHeaders();
+            headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
+            headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
+
+            // Body setzen
+            String body = "query=" + generatedQuery;
+            HttpEntity<String> request = new HttpEntity<>(body, headers);
+
+            // 3. Anfrage an GraphDB senden
+            ResponseEntity<String> response = restTemplate.exchange(
+                    endpoint,
+                    HttpMethod.POST,
+                    request,
+                    String.class
+            );
+
+            // 4. Antwort holen und prüfen (WICHTIG!)
+            String responseBody = response.getBody();
+
+            if (responseBody == null) {
+                // Falls GraphDB nichts liefert, leeres JSON zurückgeben statt null
+                return "{}";
+            }
+
+            // 5. In History speichern
+            fragenHistoryService.save(userQuestion, responseBody);
+
+            // 6. Nur den Text zurückgeben (kein ResponseEntity)
+            return responseBody;
+
+        } catch (Exception e) {
+            // Fehler loggen, damit du ihn in Azure siehst
+            e.printStackTrace();
+            // Dem Chatbot sagen, was passiert ist, statt abzustürzen
+            return "{\"error\": \"Database connection failed: " + e.getMessage() + "\"}";
         }
-
-        HttpHeaders headers = new HttpHeaders();
-        headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
-        headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
-
-        String body = "query=" + generatedQuery;
-        HttpEntity<String> request = new HttpEntity<>(body, headers);
-
-        ResponseEntity<String> response = restTemplate.exchange(
-                endpoint,
-                HttpMethod.POST,
-                request,
-                String.class
-        );
-
-        fragenHistoryService.save(userQuestion, response.getBody());
-
-        return ResponseEntity.status(response.getStatusCode())
-                .contentType(MediaType.APPLICATION_JSON)
-                .body(response.getBody());
     }
 
     @Tool(description = "Get all ingredients with their prices from the database.")
