@@ -37,7 +37,8 @@ public class ToolsInfos {
     }
 
     @Tool(description = "Generates a SPARQL query from the user's question, sends it to GraphDB, and returns the JSON response.")
-    public ResponseEntity<String> response(String userQuestion) {
+    public ResponseEntity<String> response( String userQuestion) {
+
         String generatedQuery = queryAgent.generateSparql(userQuestion);
 
         if (generatedQuery == null || generatedQuery.isEmpty()) {
@@ -48,13 +49,16 @@ public class ToolsInfos {
         headers.setContentType(MediaType.APPLICATION_FORM_URLENCODED);
         headers.setAccept(Collections.singletonList(MediaType.APPLICATION_JSON));
 
-        // WICHTIG: URL-codiert
-        String body = "query=" + URLEncoder.encode(generatedQuery, StandardCharsets.UTF_8);
+        String body = "query=" + generatedQuery;
         HttpEntity<String> request = new HttpEntity<>(body, headers);
 
-        ResponseEntity<String> response = restTemplate.postForEntity(endpoint, request, String.class);
+        ResponseEntity<String> response = restTemplate.exchange(
+                endpoint,
+                HttpMethod.POST,
+                request,
+                String.class
+        );
 
-        // Speichert Frage + Antwort in History
         fragenHistoryService.save(userQuestion, response.getBody());
 
         return ResponseEntity.status(response.getStatusCode())
