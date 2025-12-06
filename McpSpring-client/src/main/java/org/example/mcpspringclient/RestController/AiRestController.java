@@ -32,7 +32,10 @@ public class AiRestController {
 
             return ResponseEntity.ok( answer );
         } catch (Exception e) {
-            // Generische Fehlerbehandlung
+            // WICHTIG: Den Fehler in die Konsole schreiben, damit man ihn in Azure sieht!
+            e.printStackTrace(); 
+            
+            // Generische Fehlerbehandlung für den User
             return ResponseEntity.ok("{\"error\":\"Ein Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.\"}");
         }
     }
