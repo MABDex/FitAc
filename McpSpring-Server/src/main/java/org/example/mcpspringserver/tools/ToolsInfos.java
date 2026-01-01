@@ -1,5 +1,6 @@
 package org.example.mcpspringserver.tools;
 
+import org.example.mcpspringserver.IngredientMatch;
 import org.example.mcpspringserver.entities.FragenHistory;
 import org.example.mcpspringserver.repository.IngredientPriceRepository;
 import org.example.mcpspringserver.entities.IngrediantPrice;
@@ -102,60 +103,24 @@ public class ToolsInfos {
         return fragenHistoryService.getLast3();
     }
 
-    @Tool(description = "Estimates recipe price from the last answer and lists each ingredient with its price, without querying GraphDB.")
-    public String estimatePriceWithDetailsFromLastAnswer() {
 
+    @Tool(description = "Calculates the prices for the ingredients extracted from the last answer.")
+    public String getPricesForLastDish() {
     FragenHistory last = fragenHistoryService.getLast1();
+    if (last == null) return "No history found.";
 
-    if (last == null || last.getAnswer() == null) {
-        return "{\"error\": \"No previous answer found.\"}";
+    // Extrahiert Zutaten aus der Antwort (getAnswer)
+    List<IngredientMatch> matches = lstQuestionAgent.processAndMatch(last.getAnswer());
+
+    if (matches.isEmpty()) return "No ingredients recognized in the last answer.";
+
+    StringBuilder sb = new StringBuilder("Prices for the ingredients:\n");
+    for (IngredientMatch m : matches) {
+        sb.append("- ").append(m.name()).append(": ")
+                .append(m.found() ? m.price() + "€" : "Not found in database")
+                .append("\n");
     }
-
-    String lastAnswer = last.getAnswer().toLowerCase();
-
-    List<IngrediantPrice> ingredients = repository.findAll();
-
-    double totalPrice = 0.0;
-    StringBuilder ingredientJson = new StringBuilder();
-
-    for (IngrediantPrice ingredient : ingredients) {
-
-        String ingredientName = ingredient.getName().toLowerCase();
-
-        if (lastAnswer.contains(ingredientName)) {
-
-            totalPrice += ingredient.getPrice();
-
-            ingredientJson.append("""
-              {
-                "name": "%s",
-                "price": %.2f
-              },
-            """.formatted(ingredient.getName(), ingredient.getPrice()));
-        }
-    }
-
-    if (ingredientJson.length() == 0) {
-        return """
-        {
-          "info": "No known ingredients found in the last recipe.",
-          "total_price": 0.0
-        }
-        """;
-      }
-
-      // letztes Komma entfernen
-      String ingredientList = ingredientJson.toString().replaceAll(",\\s*$", "");
-
-      return """
-     {
-      "ingredients": [
-        %s
-      ],
-      "total_price": %.2f,
-      "currency": "EUR"
-    }
-    """.formatted(ingredientList, totalPrice);
-   }
+    return sb.toString();
+}
 
 }
