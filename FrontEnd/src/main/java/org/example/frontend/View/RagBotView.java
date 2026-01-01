@@ -135,7 +135,7 @@ public class RagBotView extends HorizontalLayout {
         ragBotButton.addClassName("button-ragbot");
         ragBotButton.addClassName("button-selected");
 
-        header.add(chatbotButton, ragBotButton , headerSpacer, priceLButton);
+        header.add(chatbotButton, ragBotButton ,  priceLButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
         // Titel
