@@ -2,6 +2,7 @@ package org.example.mcpspringserver.repository;
 
 import org.example.mcpspringserver.entities.IngrediantPrice;
 import org.springframework.data.jpa.repository.JpaRepository;
+import java.util.Optional;
 
 import java.util.List;
 
