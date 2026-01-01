@@ -38,7 +38,7 @@ public class SmartMealView extends HorizontalLayout {
     public SmartMealView() {
         setSizeFull();
 
-        // --- Linke Navigationsleiste ---
+        
         VerticalLayout navBar = new VerticalLayout();
         navBar.addClassName("navbar");
         navBar.setWidth("20%");
