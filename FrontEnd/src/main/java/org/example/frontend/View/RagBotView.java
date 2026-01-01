@@ -115,7 +115,7 @@ public class RagBotView extends HorizontalLayout {
         ragLabel.getStyle().set("color", "white");
         ragLabel.getStyle().set("font-style", "italic");
 
-        navBar.add(priceLButton,logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, ragLabel);
+        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, ragLabel);
 
         // --- Hauptbereich ---
         VerticalLayout mainLayout = new VerticalLayout();
@@ -135,7 +135,7 @@ public class RagBotView extends HorizontalLayout {
         ragBotButton.addClassName("button-ragbot");
         ragBotButton.addClassName("button-selected");
 
-        header.add(chatbotButton, ragBotButton);
+        header.add(chatbotButton, ragBotButton , headerSpacer, priceLButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
         // Titel
