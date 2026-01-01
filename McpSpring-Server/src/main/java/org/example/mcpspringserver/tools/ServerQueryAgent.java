@@ -23,7 +23,7 @@ public class ServerQueryAgent {
                            -recipeIngredients , 
                            -recipeInstructions 
                          3. If the question is about a recipe ingredients, make the query find all textual variations in English (e.g., "tomato" / "tomatoes", "sugar" / "Sugar"), etc. 
-                         
+      
                          
                          The RDF data is modeled using schema.org. Each recipe is represented as a resource of type schema:Recipe. The data includes the following properties:
                          schema:name (Text): The name of the recipe.
@@ -45,6 +45,8 @@ public class ServerQueryAgent {
                          PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
                                                    
                         Return only a valid SPARQL query.
+
+                        Important: Always include the estimated price of the recipe and the price of each ingredient in your response.       
                         """)
                 .build();
     }
