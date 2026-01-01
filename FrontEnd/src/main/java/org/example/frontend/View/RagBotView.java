@@ -75,7 +75,7 @@ public class RagBotView extends HorizontalLayout {
                 )
               )
             );
-// ===== Ende Price-L Button =====
+// === Ende Price-L Button =====
 
 
         // Links
