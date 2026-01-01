@@ -1,6 +1,6 @@
 package org.example.mcpspringserver.tools;
 
-import org.example.mcpspringserver.IngredientMatch;
+
 import org.example.mcpspringserver.entities.FragenHistory;
 import org.example.mcpspringserver.repository.IngredientPriceRepository;
 import org.example.mcpspringserver.entities.IngrediantPrice;
@@ -24,7 +24,7 @@ public class ToolsInfos {
 
     private final IngredientPriceRepository repository;
     private ServerQueryAgent queryAgent;
-    private LstQuestionAgent lstQuestionAgent;
+    
 
     @Autowired
     private FragenHistoryService fragenHistoryService;
@@ -38,10 +38,7 @@ public class ToolsInfos {
         this.queryAgent = queryAgent;
     }
 
-     @Autowired
-    public void setLstQuestionAgent(@Lazy LstQuestionAgent lstQuestionAgent) {
-        this.lstQuestionAgent = lstQuestionAgent;
-    }
+   
 
    // --- HIER IST DIE KORRIGIERTE METHODE ---
     @Tool(description = "Generates a SPARQL query from the user's question, sends it to GraphDB, and returns the JSON response.")
@@ -110,23 +107,6 @@ public class ToolsInfos {
     }
 
 
-    @Tool(description = "Calculates the prices for the ingredients extracted from the last answer.")
-    public String getPricesForLastDish() {
-    FragenHistory last = fragenHistoryService.getLast1();
-    if (last == null) return "No history found.";
 
-    // Extrahiert Zutaten aus der Antwort (getAnswer)
-    List<IngredientMatch> matches = lstQuestionAgent.processAndMatch(last.getAnswer());
-
-    if (matches.isEmpty()) return "No ingredients recognized in the last answer.";
-
-    StringBuilder sb = new StringBuilder("Prices for the ingredients:\n");
-    for (IngredientMatch m : matches) {
-        sb.append("- ").append(m.name()).append(": ")
-                .append(m.found() ? m.price() + "€" : "Not found in database")
-                .append("\n");
-    }
-    return sb.toString();
-}
 
 }
