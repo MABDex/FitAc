@@ -9,5 +9,6 @@ public interface IngredientPriceRepository extends JpaRepository <IngrediantPric
 
     IngrediantPrice findByName(String name);
     List<IngrediantPrice> findByNameIn(List<String> names);
+    Optional<IngrediantPrice> findByNameIgnoreCase(String name);
 
 }
