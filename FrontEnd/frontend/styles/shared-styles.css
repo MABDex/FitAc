@@ -27,6 +27,16 @@
     margin-left: 10px;
 }
 
+.nav-button-yellow {
+    background-color: #FFF3BF;   /* sehr helles Gelb */
+    color: #1F2937;              /* dunkles Grau für gute Lesbarkeit */
+    border: none;
+}
+
+.nav-button-yellow:hover {
+    background-color: #FFE066;   /* etwas stärker beim Hover */
+}
+
 /* --- Header & Buttons --- */
 .chat-header {
     display: flex;
