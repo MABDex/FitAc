@@ -46,7 +46,7 @@ public class ServerQueryAgent {
                                                    
                         Return only a valid SPARQL query.
 
-                        Important: Always include the estimated price of the recipe and the price of each ingredient in your response.       
+                               
                         """)
                 .build();
     }
