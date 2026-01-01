@@ -39,6 +39,7 @@ public class AiAgent {
                         - Always use the provided tools, do NOT invent answers without querying the data.
                         - If no matching recipes are found, politely inform the user.
                         - Include both the SPARQL query and the natural answer if the user might need it.
+                        - Always include the estimated price of the recipe and the price of each ingredient in your response.
                        
                                     """ )
                 .build();
