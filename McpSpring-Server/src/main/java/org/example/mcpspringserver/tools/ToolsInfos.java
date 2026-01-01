@@ -24,6 +24,7 @@ public class ToolsInfos {
 
     private final IngredientPriceRepository repository;
     private ServerQueryAgent queryAgent;
+    private LstQuestionAgent lstQuestionAgent;
 
     @Autowired
     private FragenHistoryService fragenHistoryService;
@@ -35,6 +36,11 @@ public class ToolsInfos {
     @Autowired
     public void setQueryAgent(@Lazy ServerQueryAgent queryAgent) {
         this.queryAgent = queryAgent;
+    }
+
+     @Autowired
+    public void setLstQuestionAgent(@Lazy LstQuestionAgent lstQuestionAgent) {
+        this.lstQuestionAgent = lstQuestionAgent;
     }
 
    // --- HIER IST DIE KORRIGIERTE METHODE ---
