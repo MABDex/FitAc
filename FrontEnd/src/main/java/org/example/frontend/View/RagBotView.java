@@ -62,6 +62,22 @@ public class RagBotView extends HorizontalLayout {
         Div spacer = new Div();
         spacer.setHeight("100px");
 
+        // ===== Price-L Button (NEU) =====
+       Button priceLButton = new Button("Price-L", new Icon(VaadinIcon.TRENDING_UP));
+       priceLButton.addClassName("nav-button");
+       priceLButton.addClassName("nav-button-yellow");
+
+       priceLButton.addClickListener(e ->
+        getUI().ifPresent(ui ->
+                ui.getPage().open(
+                        "https://app.oprfs.org/ingredient-price",
+                        "_blank"
+                )
+              )
+            );
+// ===== Ende Price-L Button =====
+
+
         // Links
         Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
         impressumLink.setTarget("_blank");
@@ -99,7 +115,7 @@ public class RagBotView extends HorizontalLayout {
         ragLabel.getStyle().set("color", "white");
         ragLabel.getStyle().set("font-style", "italic");
 
-        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, ragLabel);
+        navBar.add(priceLButton,logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, ragLabel);
 
         // --- Hauptbereich ---
         VerticalLayout mainLayout = new VerticalLayout();
