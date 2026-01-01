@@ -2,7 +2,7 @@ package org.example.mcpspringserver.tools;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import org.example.mcpspringserver.dto.IngredientMatch;
+import org.example.mcpspringserver.IngredientMatch;
 import org.example.mcpspringserver.entities.IngrediantPrice;
 import org.example.mcpspringserver.repository.IngredientPriceRepository;
 
