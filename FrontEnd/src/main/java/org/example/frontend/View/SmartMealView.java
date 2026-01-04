@@ -17,11 +17,10 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 
-// WICHTIG: Diese Imports für die saubere Darstellung
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
-import org.json.JSONObject;
+import org.json.JSONObject; // WICHTIG: Erfordert org.json in der pom.xml
 
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
@@ -39,13 +38,12 @@ public class SmartMealView extends HorizontalLayout {
     public SmartMealView() {
         setSizeFull();
 
-        // --- Linke Navigationsleiste ---
+        // --- Navigationsleiste (links) ---
         VerticalLayout navBar = new VerticalLayout();
         navBar.addClassName("navbar");
         navBar.setWidth("20%");
         navBar.setPadding(true);
         navBar.setSpacing(true);
-        navBar.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.START);
 
         Div logoDiv = new Div();
         logoDiv.setWidth("250px");
@@ -55,33 +53,6 @@ public class SmartMealView extends HorizontalLayout {
         logoDiv.getStyle().set("background-repeat", "no-repeat");
         logoDiv.getStyle().set("background-position", "center");
 
-        Div spacer = new Div();
-        spacer.setHeight("100px");
-
-        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
-        impressumLink.setTarget("_blank");
-
-        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
-        datenschutzLink.setTarget("_blank");
-
-        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
-        barrierefreiheitLink.setTarget("_blank");
-
-        Icon checkIcon = new Icon(VaadinIcon.CHECK_CIRCLE);
-        checkIcon.setSize("14px");
-        HorizontalLayout barriereLayout = new HorizontalLayout(checkIcon, barrierefreiheitLink);
-        barriereLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-
-        Icon bookIcon = new Icon(VaadinIcon.OPEN_BOOK);
-        bookIcon.setSize("14px");
-        HorizontalLayout datenschutzLayout = new HorizontalLayout(bookIcon, datenschutzLink);
-        datenschutzLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-
-        Icon caretIcon = new Icon(VaadinIcon.CLOCK);
-        caretIcon.setSize("14px");
-        HorizontalLayout impressumLayout = new HorizontalLayout(caretIcon, impressumLink);
-        impressumLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-
         Div chatLabel = new Div();
         chatLabel.setText("Chat-Bot");
         chatLabel.getStyle().set("margin-top", "auto");
@@ -90,13 +61,12 @@ public class SmartMealView extends HorizontalLayout {
         chatLabel.getStyle().set("color", "white");
         chatLabel.getStyle().set("font-style", "italic");
 
-        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, chatLabel);
+        navBar.add(logoDiv, chatLabel);
 
-        // --- Hauptbereich ---
+        // --- Hauptchatbereich ---
         VerticalLayout mainLayout = new VerticalLayout();
         mainLayout.setSizeFull();
         mainLayout.setPadding(false);
-        mainLayout.setSpacing(false);
 
         HorizontalLayout header = new HorizontalLayout();
         header.addClassName("chat-header");
@@ -107,121 +77,100 @@ public class SmartMealView extends HorizontalLayout {
 
         Button ragBotButton = new Button("RAG-Bot");
         ragBotButton.addClassName("button-ragbot");
-        ragBotButton.addClickListener(event -> getUI().ifPresent(ui -> ui.navigate("ragBot")));
+        ragBotButton.addClickListener(e -> getUI().ifPresent(ui -> ui.navigate("ragBot")));
 
         header.add(chatbotButton, ragBotButton);
-        header.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        H1 chatTitle = new H1("Dieser Chat-Bot beantwortet Fragen basierend auf der OpenAI-Datenbank");
+        H1 chatTitle = new H1("OpenAI Chat-Bot");
         chatTitle.addClassName("chat-title");
 
-        // --- Nachrichtenbereich ---
+        // Die Fläche, in der die Nachrichten erscheinen
         Div messageArea = new Div();
         messageArea.setWidthFull();
         messageArea.getStyle().set("overflow-y", "auto");
         messageArea.getStyle().set("padding", "20px");
-        messageArea.getStyle().set("background-color", "#FFFFFF");
-        
-        Div botIntro = new Div();
-        botIntro.setText("\uD83E\uDD16 Hallo! Wie kann ich dir heute helfen?");
-        botIntro.getStyle().set("font-style", "italic");
-        messageArea.add(botIntro);
+        messageArea.getStyle().set("flex-grow", "1");
 
-        // --- Eingabefeld ---
+        // --- Eingabefeld & Senden ---
         HorizontalLayout inputLayout = new HorizontalLayout();
         inputLayout.setWidthFull();
         TextArea inputField = new TextArea();
-        inputField.setPlaceholder("Wie kann ich dir weiterhelfen?");
-        inputField.addClassName("input-field");
+        inputField.setPlaceholder("Wie kann ich dir helfen?");
         inputField.setWidthFull();
-        inputField.getStyle().set("resize", "none");
-
-        inputField.getElement().executeJs(
-                "this.style.height='auto';" +
-                "this.addEventListener('input', function() {" +
-                "  this.style.height='auto';" +
-                "  this.style.height=(this.scrollHeight) + 'px';" +
-                "});"
-        );
 
         Button sendButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
         sendButton.addClassName("send-button");
 
-        Button micButton = new Button(new Icon(VaadinIcon.MICROPHONE));
-        micButton.addClassName("mic-button");
-        micButton.addClickListener(e -> {
-            inputField.getElement().executeJs(
-                "var recognition = new webkitSpeechRecognition(); recognition.lang = 'de-DE';" +
-                "recognition.onresult = function(event) { $0.value = event.results[0][0].transcript;" +
-                "$0.dispatchEvent(new Event('input', { bubbles: true })); }; recognition.start();", inputField.getElement());
-        });
-
-        inputLayout.add(inputField, sendButton, micButton);
-        inputLayout.setFlexGrow(1, inputField);
-
-        // --- Logik beim Klicken auf Senden ---
+        // --- CLICK LISTENER (LOGIK) ---
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
             if (!query.isEmpty()) {
-                // User-Nachricht anzeigen
+                // 1. User Frage anzeigen
                 Div userMsg = new Div();
                 userMsg.setText("Ich: " + query);
                 userMsg.getStyle().set("font-weight", "bold");
-                userMsg.getStyle().set("margin-bottom", "10px");
                 messageArea.add(userMsg);
 
-                // Backend aufrufen
-                String rawBackendResponse = callBackend(query);
-                
-                // DAS HIER ENTFERNT DAS JSON UND DIE APOSTROPHE:
-                String cleanText = extractResponseFromJson(rawBackendResponse);
+                // 2. Antwort vom Backend holen
+                String rawResponse = callBackend(query);
 
-                // Bot-Nachricht anzeigen
+                // 3. WICHTIG: JSON "auspacken" und nur den Text behalten
+                String cleanText = extractTextFromJson(rawResponse);
+
+                // 4. Saubere Antwort anzeigen
                 Div botMsg = new Div();
-                botMsg.getStyle().set("background-color", "#F3F4F6"); // Schönes Grau wie im 2. Screenshot
+                botMsg.getStyle().set("background-color", "#F1F5F9"); // Helles Grau
                 botMsg.getStyle().set("padding", "15px");
                 botMsg.getStyle().set("border-radius", "10px");
-                botMsg.getStyle().set("margin-bottom", "20px");
+                botMsg.getStyle().set("margin-bottom", "15px");
                 
-                // Text als HTML (wegen Markdown) setzen
-                botMsg.getElement().setProperty("innerHTML", convertMarkdownToHtml(cleanText));
+                // Markdown zu HTML konvertieren (für Listen, Fett, etc.)
+                botMsg.getElement().setProperty("innerHTML", renderMarkdown(cleanText));
                 
                 messageArea.add(botMsg);
 
-                // UI aktualisieren
+                // Scrollen & Reset
                 messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
                 inputField.clear();
-                inputField.getElement().executeJs("this.style.height='auto';");
-            } else {
-                Notification.show("Bitte gib eine Frage ein!");
             }
         });
 
+        inputLayout.add(inputField, sendButton);
         mainLayout.add(header, chatTitle, messageArea, inputLayout);
-        mainLayout.expand(messageArea);
 
         add(navBar, mainLayout);
         setFlexGrow(1, mainLayout);
     }
 
-    // --- Hilfsmethode: Holt nur den reinen Text aus dem JSON ---
-    private String extractResponseFromJson(String jsonRaw) {
+    /**
+     * Entfernt den JSON-Ballast und die geschweiften Klammern.
+     */
+    private String extractTextFromJson(String raw) {
+        if (raw == null) return "";
+        String trimmed = raw.trim();
+        
+        // Versuchen, das "response" Feld aus dem JSON zu ziehen
         try {
-            // Wir prüfen, ob es wirklich ein JSON ist
-            if (jsonRaw != null && jsonRaw.trim().startsWith("{")) {
-                JSONObject json = new JSONObject(jsonRaw);
-                return json.getString("response"); // Holt den Wert von "response"
+            if (trimmed.startsWith("{")) {
+                JSONObject json = new JSONObject(trimmed);
+                return json.optString("response", trimmed);
+            }
+            // Falls das Backend "json { ... }" sendet (wie im Screenshot)
+            if (trimmed.startsWith("json")) {
+                String potentialJson = trimmed.substring(4).trim();
+                JSONObject json = new JSONObject(potentialJson);
+                return json.optString("response", trimmed);
             }
         } catch (Exception e) {
-            // Falls das Backend mal kein JSON schickt, zeigen wir den Text so an
+            // Falls es kein echtes JSON ist, säubern wir manuell die schlimmsten Zeichen
+            return trimmed.replace("json{", "").replace("{\"response\":\"", "").replace("\"}", "").replace("}", "");
         }
-        return jsonRaw; 
+        return trimmed;
     }
 
-    private String convertMarkdownToHtml(String markdown) {
-        if (markdown == null || markdown.isEmpty()) return "";
+    private String renderMarkdown(String text) {
         Parser parser = Parser.builder().build();
-        Node document = parser.parse(markdown);
+        Node document = parser.parse(text);
         HtmlRenderer renderer = HtmlRenderer.builder().build();
         return renderer.render(document);
     }
@@ -232,18 +181,14 @@ public class SmartMealView extends HorizontalLayout {
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
-            conn.setRequestProperty("Accept", "text/plain");
-
             BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-            StringBuilder response = new StringBuilder();
+            StringBuilder res = new StringBuilder();
             String line;
-            while ((line = in.readLine()) != null) {
-                response.append(line);
-            }
+            while ((line = in.readLine()) != null) res.append(line);
             in.close();
-            return response.toString();
+            return res.toString();
         } catch (Exception e) {
-            return "Fehler: Verbindung zum Server fehlgeschlagen.";
+            return "Fehler bei der Verbindung.";
         }
     }
 }
