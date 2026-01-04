@@ -17,7 +17,7 @@ import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
 
-// Neue Imports für Sauberkeit und Markdown
+// WICHTIG: Diese Imports für die saubere Darstellung
 import org.commonmark.node.Node;
 import org.commonmark.parser.Parser;
 import org.commonmark.renderer.html.HtmlRenderer;
@@ -67,7 +67,6 @@ public class SmartMealView extends HorizontalLayout {
         Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
         barrierefreiheitLink.setTarget("_blank");
 
-        // Icons & Layouts
         Icon checkIcon = new Icon(VaadinIcon.CHECK_CIRCLE);
         checkIcon.setSize("14px");
         HorizontalLayout barriereLayout = new HorizontalLayout(checkIcon, barrierefreiheitLink);
@@ -99,7 +98,6 @@ public class SmartMealView extends HorizontalLayout {
         mainLayout.setPadding(false);
         mainLayout.setSpacing(false);
 
-        // Header
         HorizontalLayout header = new HorizontalLayout();
         header.addClassName("chat-header");
         header.setWidthFull();
@@ -114,24 +112,22 @@ public class SmartMealView extends HorizontalLayout {
         header.add(chatbotButton, ragBotButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        // Titel
         H1 chatTitle = new H1("Dieser Chat-Bot beantwortet Fragen basierend auf der OpenAI-Datenbank");
         chatTitle.addClassName("chat-title");
 
-        // Nachrichtenbereich
+        // --- Nachrichtenbereich ---
         Div messageArea = new Div();
         messageArea.setWidthFull();
         messageArea.getStyle().set("overflow-y", "auto");
         messageArea.getStyle().set("padding", "20px");
         messageArea.getStyle().set("background-color", "#FFFFFF");
         
-        Div initialMessage = new Div();
-        initialMessage.setText("\uD83E\uDD16 Hallo! Wie kann ich dir heute helfen?");
-        initialMessage.getStyle().set("font-style", "italic");
-        initialMessage.getStyle().set("color", "gray");
-        messageArea.add(initialMessage);
+        Div botIntro = new Div();
+        botIntro.setText("\uD83E\uDD16 Hallo! Wie kann ich dir heute helfen?");
+        botIntro.getStyle().set("font-style", "italic");
+        messageArea.add(botIntro);
 
-        // Eingabebereich
+        // --- Eingabefeld ---
         HorizontalLayout inputLayout = new HorizontalLayout();
         inputLayout.setWidthFull();
         TextArea inputField = new TextArea();
@@ -140,7 +136,6 @@ public class SmartMealView extends HorizontalLayout {
         inputField.setWidthFull();
         inputField.getStyle().set("resize", "none");
 
-        // Dynamisches Wachsen
         inputField.getElement().executeJs(
                 "this.style.height='auto';" +
                 "this.addEventListener('input', function() {" +
@@ -156,50 +151,49 @@ public class SmartMealView extends HorizontalLayout {
         micButton.addClassName("mic-button");
         micButton.addClickListener(e -> {
             inputField.getElement().executeJs(
-                "if (!('webkitSpeechRecognition' in window)) { alert('Browser nicht unterstützt'); } " +
-                "else { var recognition = new webkitSpeechRecognition(); recognition.lang = 'de-DE'; " +
-                "recognition.onresult = function(event) { $0.value = event.results[0][0].transcript; " +
-                "$0.dispatchEvent(new Event('input', { bubbles: true })); }; recognition.start(); }", inputField.getElement());
+                "var recognition = new webkitSpeechRecognition(); recognition.lang = 'de-DE';" +
+                "recognition.onresult = function(event) { $0.value = event.results[0][0].transcript;" +
+                "$0.dispatchEvent(new Event('input', { bubbles: true })); }; recognition.start();", inputField.getElement());
         });
 
         inputLayout.add(inputField, sendButton, micButton);
         inputLayout.setFlexGrow(1, inputField);
 
-        // --- Senden Logik ---
+        // --- Logik beim Klicken auf Senden ---
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
             if (!query.isEmpty()) {
-                // Backend Aufruf
-                String rawJson = callBackend(query);
-                
-                // JSON säubern
-                String cleanText = extractResponseFromJson(rawJson);
-
-                // User Nachricht
+                // User-Nachricht anzeigen
                 Div userMsg = new Div();
                 userMsg.setText("Ich: " + query);
                 userMsg.getStyle().set("font-weight", "bold");
-                userMsg.getStyle().set("margin-bottom", "5px");
+                userMsg.getStyle().set("margin-bottom", "10px");
                 messageArea.add(userMsg);
 
-                // Bot Nachricht (Markdown gerendert)
-                Div botMsg = new Div();
-                botMsg.getStyle().set("background-color", "#F3F4F6");
-                botMsg.getStyle().set("padding", "10px");
-                botMsg.getStyle().set("border-radius", "8px");
-                botMsg.getStyle().set("margin-bottom", "15px");
+                // Backend aufrufen
+                String rawBackendResponse = callBackend(query);
                 
-                String htmlResponse = convertMarkdownToHtml(cleanText);
-                botMsg.getElement().setProperty("innerHTML", htmlResponse);
+                // DAS HIER ENTFERNT DAS JSON UND DIE APOSTROPHE:
+                String cleanText = extractResponseFromJson(rawBackendResponse);
+
+                // Bot-Nachricht anzeigen
+                Div botMsg = new Div();
+                botMsg.getStyle().set("background-color", "#F3F4F6"); // Schönes Grau wie im 2. Screenshot
+                botMsg.getStyle().set("padding", "15px");
+                botMsg.getStyle().set("border-radius", "10px");
+                botMsg.getStyle().set("margin-bottom", "20px");
+                
+                // Text als HTML (wegen Markdown) setzen
+                botMsg.getElement().setProperty("innerHTML", convertMarkdownToHtml(cleanText));
                 
                 messageArea.add(botMsg);
 
-                // UI Reset
+                // UI aktualisieren
                 messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
                 inputField.clear();
                 inputField.getElement().executeJs("this.style.height='auto';");
             } else {
-                Notification.show("Bitte gib eine Frage ein.");
+                Notification.show("Bitte gib eine Frage ein!");
             }
         });
 
@@ -210,18 +204,18 @@ public class SmartMealView extends HorizontalLayout {
         setFlexGrow(1, mainLayout);
     }
 
-    // --- Hilfsmethoden ---
-
-    private String extractResponseFromJson(String jsonString) {
+    // --- Hilfsmethode: Holt nur den reinen Text aus dem JSON ---
+    private String extractResponseFromJson(String jsonRaw) {
         try {
-            if (jsonString.trim().startsWith("{")) {
-                JSONObject json = new JSONObject(jsonString);
-                return json.getString("response");
+            // Wir prüfen, ob es wirklich ein JSON ist
+            if (jsonRaw != null && jsonRaw.trim().startsWith("{")) {
+                JSONObject json = new JSONObject(jsonRaw);
+                return json.getString("response"); // Holt den Wert von "response"
             }
         } catch (Exception e) {
-            // Falls es kein JSON ist oder das Feld fehlt
+            // Falls das Backend mal kein JSON schickt, zeigen wir den Text so an
         }
-        return jsonString; 
+        return jsonRaw; 
     }
 
     private String convertMarkdownToHtml(String markdown) {
@@ -249,7 +243,7 @@ public class SmartMealView extends HorizontalLayout {
             in.close();
             return response.toString();
         } catch (Exception e) {
-            return "Fehler beim Abrufen der Antwort.";
+            return "Fehler: Verbindung zum Server fehlgeschlagen.";
         }
     }
 }
