@@ -29,7 +29,7 @@ import java.net.URL;
 public class SmartMealView extends HorizontalLayout {
 
     public SmartMealView() {
-      setSizeFull();
+        setSizeFull();
 
         // Linke Navigationsleiste
         VerticalLayout navBar = new VerticalLayout();
@@ -44,25 +44,19 @@ public class SmartMealView extends HorizontalLayout {
         img.setWidth("150px");
         img.setHeight("80px");
 
-
         Div logoDiv = new Div();
         logoDiv.setWidth("250px");
         logoDiv.setHeight("100px");
         logoDiv.getStyle().set("background-image", "url('logo2.png')");
-        logoDiv.getStyle().set("background-size", "contain");  // passt Bild an Div an
+        logoDiv.getStyle().set("background-size", "contain");
         logoDiv.getStyle().set("background-repeat", "no-repeat");
         logoDiv.getStyle().set("background-position", "center");
 
-
-
         Div spacer = new Div();
-        spacer.setHeight("100px");// Abstand wie 5 Leerzeilen
-
-
-
+        spacer.setHeight("100px");
 
         Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
-        impressumLink.setTarget("_blank"); // öffnet in neuem Tab
+        impressumLink.setTarget("_blank");
 
         Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
         datenschutzLink.setTarget("_blank");
@@ -70,46 +64,39 @@ public class SmartMealView extends HorizontalLayout {
         Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
         barrierefreiheitLink.setTarget("_blank");
 
-
-        // Icons
         Icon checkIcon = new Icon(VaadinIcon.CHECK_CIRCLE);
-        checkIcon.setSize("14px"); // Größe anpassen
+        checkIcon.setSize("14px");
         checkIcon.getStyle().set("margin-left", "5px");
-        HorizontalLayout barriereLayout = new HorizontalLayout( checkIcon , barrierefreiheitLink);
+        HorizontalLayout barriereLayout = new HorizontalLayout(checkIcon, barrierefreiheitLink);
         barriereLayout.setAlignItems(FlexComponent.Alignment.CENTER);
 
         Icon bookIcon = new Icon(VaadinIcon.OPEN_BOOK);
         bookIcon.setSize("14px");
         bookIcon.getStyle().set("margin-left", "5px");
-        HorizontalLayout datenschutzLayout = new HorizontalLayout(bookIcon , datenschutzLink);
+        HorizontalLayout datenschutzLayout = new HorizontalLayout(bookIcon, datenschutzLink);
         datenschutzLayout.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        Icon caretIcon =  new Icon(VaadinIcon.CLOCK);
+        Icon caretIcon = new Icon(VaadinIcon.CLOCK);
         caretIcon.setSize("14px");
         caretIcon.getStyle().set("margin-left", "5px");
-        HorizontalLayout impressumLayout = new HorizontalLayout(caretIcon ,impressumLink);
+        HorizontalLayout impressumLayout = new HorizontalLayout(caretIcon, impressumLink);
         impressumLayout.setAlignItems(FlexComponent.Alignment.CENTER);
-
 
         Div chatLabel = new Div();
         chatLabel.setText("Chat-Bot");
-        chatLabel.getStyle().set("margin-top", "auto"); // nach unten schieben
+        chatLabel.getStyle().set("margin-top", "auto");
         chatLabel.getStyle().set("font-size", "24px");
         chatLabel.getStyle().set("font-weight", "bold");
         chatLabel.getStyle().set("color", "white");
         chatLabel.getStyle().set("font-style", "italic");
 
+        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, chatLabel);
 
-
-        navBar.add(logoDiv ,spacer , impressumLayout,  datenschutzLayout,  barriereLayout , chatLabel );
-
-        // Hauptbereich für Chat
         VerticalLayout mainLayout = new VerticalLayout();
         mainLayout.setSizeFull();
         mainLayout.setPadding(false);
         mainLayout.setSpacing(false);
 
-        // Header mit Buttons
         HorizontalLayout header = new HorizontalLayout();
         header.addClassName("chat-header");
         header.setWidthFull();
@@ -117,61 +104,48 @@ public class SmartMealView extends HorizontalLayout {
         Button chatbotButton = new Button("Chat-Bot");
         chatbotButton.addClassName("button-chatbot");
 
-
-
-
         Button ragBotButton = new Button("RAG-Bot");
         ragBotButton.addClassName("button-ragbot");
-
 
         header.add(chatbotButton, ragBotButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
         ragBotButton.addClickListener(event -> {
-            getUI().ifPresent(ui -> ui.navigate("ragBot")); // Navigiert zur neuen View
+            getUI().ifPresent(ui -> ui.navigate("ragBot"));
         });
 
-
-
-        // Titel im Chatbereich
         H1 chatTitle = new H1(" Dieser Chat-bot beantwortet Fragen basierend auf der OpenAI-Datenbank");
         chatTitle.addClassName("chat-title");
 
-        // Bereich für Nachrichten (dynamisch)
         Div messageArea = new Div();
         messageArea.setWidthFull();
-        //messageArea.getStyle().set("max-height", "70vh"); // wächst bis max. 70% der Seite
-        messageArea.getStyle().set("overflow-y", "auto"); // Scrollbar nur wenn nötig
+        messageArea.getStyle().set("overflow-y", "auto");
         messageArea.getStyle().set("padding", "10px");
         messageArea.getStyle().set("background-color", "#FFFFFF");
         messageArea.setText("\uD83E\uDD16 Hier steht die Antwort des LLM...");
         messageArea.getStyle().set("font-style", "italic");
 
-
-        // Eingabefeld (mehrzeilig) und Senden Button
         HorizontalLayout inputLayout = new HorizontalLayout();
         inputLayout.setWidthFull();
+
         TextArea inputField = new TextArea();
         inputField.setPlaceholder("Wie kann ich dir weiterhelfen?");
         inputField.addClassName("input-field");
         inputField.setWidthFull();
-        inputField.getStyle().set("resize", "none");  // verhindert manuelles Ändern
+        inputField.getStyle().set("resize", "none");
 
-        // Dynamisches Wachsen JavaScript Code
         inputField.getElement().executeJs(
                 "this.style.height='auto';" +
                         "this.style.overflowY='hidden';" +
                         "this.addEventListener('input', function() {" +
-                        "  this.style.height='auto';" +               // zurücksetzen
-                        "  this.style.height=(this.scrollHeight) + 'px';" + // an Inhalt anpassen
+                        "  this.style.height='auto';" +
+                        "  this.style.height=(this.scrollHeight) + 'px';" +
                         "});"
         );
-
 
         Button sendButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
         sendButton.addClassName("send-button");
 
-        //Micro
         Button micButton = new Button(new Icon(VaadinIcon.MICROPHONE));
         micButton.addClassName("mic-button");
         micButton.getElement().setAttribute("title", "Spracheingabe starten");
@@ -187,20 +161,17 @@ public class SmartMealView extends HorizontalLayout {
                             "  recognition.onresult = function(event) {" +
                             "    let text = event.results[0][0].transcript;" +
                             "    $0.value = text;" +
-                            "    $0.dispatchEvent(new Event('input', { bubbles: true }));" +   // wichtig für Vaadin
-                            "    $0.dispatchEvent(new Event('change', { bubbles: true }));" + // extra, falls nötig
+                            "    $0.dispatchEvent(new Event('input', { bubbles: true }));" +
+                            "    $0.dispatchEvent(new Event('change', { bubbles: true }));" +
                             "  };" +
                             "  recognition.start();" +
                             "}"
                     , inputField.getElement());
         });
 
-        inputLayout.add(inputField, sendButton , micButton);
+        inputLayout.add(inputField, sendButton, micButton);
         inputLayout.setFlexGrow(1, inputField);
 
-
-
-        // Klick-Listener: Anfrage an Backend senden
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
 
@@ -211,14 +182,10 @@ public class SmartMealView extends HorizontalLayout {
 
             String rawResponse = callBackend(query);
 
-            /* ========= UNIVERSALE BEREINIGUNG ========= */
             String cleanResponse = rawResponse;
-
-            // Markdown-Codeblock entfernen
             cleanResponse = cleanResponse.replaceAll("```json", "");
             cleanResponse = cleanResponse.replaceAll("```", "");
 
-            // JSON-Struktur flach machen
             if (cleanResponse.contains("{") && cleanResponse.contains("}")) {
                 cleanResponse = cleanResponse
                         .replaceAll("[{}\\[\\]\"]", "")
@@ -227,7 +194,6 @@ public class SmartMealView extends HorizontalLayout {
             }
 
             cleanResponse = cleanResponse.trim();
-            /* ========================================= */
 
             Div userMsg = new Div("User Frage: " + query);
             userMsg.getStyle().set("font-weight", "bold");
@@ -245,14 +211,14 @@ public class SmartMealView extends HorizontalLayout {
             inputField.clear();
         });
 
-        mainLayout.add(title, messageArea, inputLayout);
+        // ✅ Hier die Korrektur: title → chatTitle
+        mainLayout.add(chatTitle, messageArea, inputLayout);
         mainLayout.expand(messageArea);
 
         add(navBar, mainLayout);
         setFlexGrow(1, mainLayout);
     }
 
-    /* ---------------- BACKEND CALL ---------------- */
     private String callBackend(String question) {
         try {
             String urlString = "http://localhost:8070/askLLM?question=" +
