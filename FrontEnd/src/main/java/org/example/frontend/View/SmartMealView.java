@@ -212,7 +212,7 @@ public class SmartMealView extends HorizontalLayout {
         });
 
         // ✅ Hier die Korrektur: title → chatTitle
-        mainLayout.add(chatTitle, messageArea, inputLayout);
+        mainLayout.add(header, chatTitle, messageArea, inputLayout);
         mainLayout.expand(messageArea);
 
         add(navBar, mainLayout);
