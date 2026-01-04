@@ -5,6 +5,7 @@ import com.vaadin.flow.component.dependency.CssImport;
 import com.vaadin.flow.component.html.Anchor;
 import com.vaadin.flow.component.html.Div;
 import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
@@ -30,37 +31,86 @@ public class SmartMealView extends HorizontalLayout {
     public SmartMealView() {
         setSizeFull();
 
-        /* ---------------- NAVBAR ---------------- */
+        // Linke Navigationsleiste
         VerticalLayout navBar = new VerticalLayout();
+        navBar.addClassName("navbar");
         navBar.setWidth("20%");
-        navBar.getStyle().set("background", "#1F2937");
         navBar.setPadding(true);
+        navBar.setSpacing(true);
+        navBar.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.START);
+
+        Image img = new Image("fit.png", "logo");
+        img.setWidth("150px");
+        img.setHeight("80px");
+
+        Div logoDiv = new Div();
+        logoDiv.setWidth("250px");
+        logoDiv.setHeight("100px");
+        logoDiv.getStyle().set("background-image", "url('logo2.png')");
+        logoDiv.getStyle().set("background-size", "contain");
+        logoDiv.getStyle().set("background-repeat", "no-repeat");
+        logoDiv.getStyle().set("background-position", "center");
+
+        Div spacer = new Div();
+        spacer.setHeight("100px");
+
+        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
+        impressumLink.setTarget("_blank");
+
+        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
+        datenschutzLink.setTarget("_blank");
+
+        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
+        barrierefreiheitLink.setTarget("_blank");
+
+        HorizontalLayout impressumLayout = new HorizontalLayout(new Icon(VaadinIcon.CLOCK), impressumLink);
+        HorizontalLayout datenschutzLayout = new HorizontalLayout(new Icon(VaadinIcon.OPEN_BOOK), datenschutzLink);
+        HorizontalLayout barriereLayout = new HorizontalLayout(new Icon(VaadinIcon.CHECK_CIRCLE), barrierefreiheitLink);
 
         Div chatLabel = new Div("Chat-Bot");
         chatLabel.getStyle()
-                .set("color", "white")
+                .set("margin-top", "auto")
                 .set("font-size", "24px")
-                .set("font-weight", "bold");
+                .set("font-weight", "bold")
+                .set("color", "white")
+                .set("font-style", "italic");
 
-        navBar.add(chatLabel);
+        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, chatLabel);
 
-        /* ---------------- MAIN ---------------- */
+        // Hauptbereich
         VerticalLayout mainLayout = new VerticalLayout();
         mainLayout.setSizeFull();
+        mainLayout.setPadding(false);
+        mainLayout.setSpacing(false);
 
-        H1 title = new H1("SmartMeal – Rezept Chatbot");
+        HorizontalLayout header = new HorizontalLayout();
+        header.addClassName("chat-header");
+        header.setWidthFull();
+
+        Button chatbotButton = new Button("Chat-Bot");
+        Button ragBotButton = new Button("RAG-Bot");
+
+        ragBotButton.addClickListener(e ->
+                getUI().ifPresent(ui -> ui.navigate("ragBot"))
+        );
+
+        header.add(chatbotButton, ragBotButton);
+        header.setAlignItems(FlexComponent.Alignment.CENTER);
+
+        H1 chatTitle = new H1("Dieser Chat-bot beantwortet Fragen basierend auf der OpenAI-Datenbank");
 
         Div messageArea = new Div();
         messageArea.setWidthFull();
-        messageArea.getStyle()
-                .set("overflow-y", "auto")
-                .set("background", "#FFFFFF")
-                .set("padding", "10px");
-        messageArea.setText("🤖 Stelle mir eine Frage…");
+        messageArea.getStyle().set("overflow-y", "auto");
+        messageArea.getStyle().set("padding", "10px");
+        messageArea.getStyle().set("background-color", "#FFFFFF");
+        messageArea.setText("🤖 Hier steht die Antwort des LLM...");
+        messageArea.getStyle().set("font-style", "italic");
 
         TextArea inputField = new TextArea();
-        inputField.setPlaceholder("z.B. Ich brauche ein Rezept mit Tomaten");
+        inputField.setPlaceholder("Wie kann ich dir weiterhelfen?");
         inputField.setWidthFull();
+        inputField.getStyle().set("resize", "none");
 
         Button sendButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
 
@@ -68,63 +118,46 @@ public class SmartMealView extends HorizontalLayout {
         inputLayout.setWidthFull();
         inputLayout.setFlexGrow(1, inputField);
 
-        /* ---------------- CLICK ---------------- */
+        // Klick-Listener
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
 
             if (query.isEmpty()) {
-                Notification.show("Bitte Frage eingeben");
+                Notification.show("Bitte geben Sie eine Frage ein!");
                 return;
             }
 
-            String rawResponse = callBackend(query);
+            String jsonResponse = callBackend(query);
+            String cleanResponse = cleanLLMResponse(jsonResponse);
 
-            /* ========= UNIVERSALE BEREINIGUNG ========= */
-            String cleanResponse = rawResponse;
+            Div userMessage = new Div("User Frage: " + query);
+            userMessage.getStyle().set("font-weight", "bold");
 
-            // Markdown-Codeblock entfernen
-            cleanResponse = cleanResponse.replaceAll("```json", "");
-            cleanResponse = cleanResponse.replaceAll("```", "");
-
-            // JSON-Struktur flach machen
-            if (cleanResponse.contains("{") && cleanResponse.contains("}")) {
-                cleanResponse = cleanResponse
-                        .replaceAll("[{}\\[\\]\"]", "")
-                        .replaceAll("\\s*,\\s*", "\n")
-                        .replaceAll("\\s*:\\s*", ": ");
-            }
-
-            cleanResponse = cleanResponse.trim();
-            /* ========================================= */
-
-            Div userMsg = new Div("User Frage: " + query);
-            userMsg.getStyle().set("font-weight", "bold");
-
-            Div botMsg = new Div("Antwort:\n" + cleanResponse);
-            botMsg.getStyle()
+            Div botMessage = new Div("Antwort:\n" + cleanResponse);
+            botMessage.getStyle()
                     .set("white-space", "pre-wrap")
-                    .set("background", "#E5E7EB")
-                    .set("padding", "10px")
+                    .set("background-color", "#E5E7EB")
+                    .set("padding", "8px")
                     .set("border-radius", "6px");
 
-            messageArea.add(userMsg, botMsg);
+            messageArea.add(userMessage, botMessage);
             messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
 
             inputField.clear();
         });
 
-        mainLayout.add(title, messageArea, inputLayout);
+        mainLayout.add(header, chatTitle, messageArea, inputLayout);
         mainLayout.expand(messageArea);
 
         add(navBar, mainLayout);
         setFlexGrow(1, mainLayout);
     }
 
-    /* ---------------- BACKEND CALL ---------------- */
+    // Backend-Aufruf
     private String callBackend(String question) {
         try {
-            String urlString = "http://localhost:8070/askLLM?question=" +
-                    java.net.URLEncoder.encode(question, "UTF-8");
+            String urlString = "http://localhost:8070/askLLM?question="
+                    + java.net.URLEncoder.encode(question, "UTF-8");
 
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -145,7 +178,26 @@ public class SmartMealView extends HorizontalLayout {
             return response.toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return "Fehler beim Backend-Aufruf.";
+            return "Fehler beim Abrufen der Antwort vom Backend.";
         }
+    }
+
+    // ✅ NEUE METHODE: Bereinigt JSON / ```json / Markdown
+    private String cleanLLMResponse(String rawResponse) {
+        if (rawResponse == null) return "";
+
+        String cleaned = rawResponse;
+
+        cleaned = cleaned.replaceAll("```json", "");
+        cleaned = cleaned.replaceAll("```", "");
+
+        if (cleaned.contains("{") && cleaned.contains("}")) {
+            cleaned = cleaned
+                    .replaceAll("[{}\\[\\]\"]", "")
+                    .replaceAll("\\s*,\\s*", "\n")
+                    .replaceAll("\\s*:\\s*", ": ");
+        }
+
+        return cleaned.trim();
     }
 }
