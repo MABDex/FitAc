@@ -203,58 +203,60 @@ public class SmartMealView extends HorizontalLayout {
         // Klick-Listener: Anfrage an Backend senden
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
-            if (!query.isEmpty()) {
-                String jsonResponse = callBackend(query);
 
-                // Nutzer-Nachricht anzeigen
-                Div userMessage = new Div();
-                userMessage.setText("User Frage :" + query);
-                userMessage.getStyle().set("font-weight", "bold");
-                userMessage.getStyle().set("margin-bottom", "5px");
-                messageArea.add(userMessage);
-
-                // Bot-Antwort anzeigen
-                Div botMessage = new Div();
-                botMessage.setText("Antwort: " + jsonResponse);
-                botMessage.getStyle().set("margin-bottom", "10px");
-                botMessage.getStyle().set("background-color", "#E5E7EB");
-                botMessage.getStyle().set("padding", "5px");
-                botMessage.getStyle().set("border-radius", "5px");
-                messageArea.add(botMessage);
-
-                // Scrollen nach unten
-                messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
-
-                // Eingabefeld leeren
-                inputField.clear();
-
-                // Eingabefeld wieder klein machen
-                inputField.getElement().executeJs(
-                        "this.style.height='auto';" +
-                                "this.style.overflowY='hidden';"
-                );
-
-
-            } else {
-                Notification.show("Bitte geben Sie eine Frage ein!");
+            if (query.isEmpty()) {
+                Notification.show("Bitte Frage eingeben");
+                return;
             }
+
+            String rawResponse = callBackend(query);
+
+            /* ========= UNIVERSALE BEREINIGUNG ========= */
+            String cleanResponse = rawResponse;
+
+            // Markdown-Codeblock entfernen
+            cleanResponse = cleanResponse.replaceAll("```json", "");
+            cleanResponse = cleanResponse.replaceAll("```", "");
+
+            // JSON-Struktur flach machen
+            if (cleanResponse.contains("{") && cleanResponse.contains("}")) {
+                cleanResponse = cleanResponse
+                        .replaceAll("[{}\\[\\]\"]", "")
+                        .replaceAll("\\s*,\\s*", "\n")
+                        .replaceAll("\\s*:\\s*", ": ");
+            }
+
+            cleanResponse = cleanResponse.trim();
+            /* ========================================= */
+
+            Div userMsg = new Div("User Frage: " + query);
+            userMsg.getStyle().set("font-weight", "bold");
+
+            Div botMsg = new Div("Antwort:\n" + cleanResponse);
+            botMsg.getStyle()
+                    .set("white-space", "pre-wrap")
+                    .set("background", "#E5E7EB")
+                    .set("padding", "10px")
+                    .set("border-radius", "6px");
+
+            messageArea.add(userMsg, botMsg);
+            messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
+
+            inputField.clear();
         });
 
-
-        // Alles zum mainLayout hinzufügen
-        mainLayout.add(header, chatTitle, messageArea, inputLayout);
+        mainLayout.add(title, messageArea, inputLayout);
         mainLayout.expand(messageArea);
 
-        // Hauptlayout zusammenbauen
         add(navBar, mainLayout);
         setFlexGrow(1, mainLayout);
     }
 
-    // Backend-Aufruf
+    /* ---------------- BACKEND CALL ---------------- */
     private String callBackend(String question) {
         try {
-            String urlString = "http://localhost:8070/askLLM?question="
-                    + java.net.URLEncoder.encode(question, "UTF-8");
+            String urlString = "http://localhost:8070/askLLM?question=" +
+                    java.net.URLEncoder.encode(question, "UTF-8");
 
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
@@ -275,26 +277,7 @@ public class SmartMealView extends HorizontalLayout {
             return response.toString();
         } catch (Exception e) {
             e.printStackTrace();
-            return "Fehler beim Abrufen der Antwort vom Backend.";
+            return "Fehler beim Backend-Aufruf.";
         }
-    }
-
-    // ✅ NEUE METHODE: Bereinigt JSON / ```json / Markdown
-    private String cleanLLMResponse(String rawResponse) {
-        if (rawResponse == null) return "";
-
-        String cleaned = rawResponse;
-
-        cleaned = cleaned.replaceAll("```json", "");
-        cleaned = cleaned.replaceAll("```", "");
-
-        if (cleaned.contains("{") && cleaned.contains("}")) {
-            cleaned = cleaned
-                    .replaceAll("[{}\\[\\]\"]", "")
-                    .replaceAll("\\s*,\\s*", "\n")
-                    .replaceAll("\\s*:\\s*", ": ");
-        }
-
-        return cleaned.trim();
     }
 }
