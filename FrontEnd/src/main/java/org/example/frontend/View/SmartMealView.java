@@ -67,13 +67,13 @@ public class SmartMealView extends HorizontalLayout {
         impressumLayout.setAlignItems(FlexComponent.Alignment.CENTER);
         impressumLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
-        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Datenschutzinformation");
+        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/datenschutzerklaerung.html", "Datenschutzinformation");
         datenschutzLink.setTarget("_blank");
         HorizontalLayout datenschutzLayout = new HorizontalLayout(new Icon(VaadinIcon.OPEN_BOOK), datenschutzLink);
         datenschutzLayout.setAlignItems(FlexComponent.Alignment.CENTER);
         datenschutzLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
-        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Barrierefreiheitserklärung");
+        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/barrierefreiheitserklaerung.html", "Barrierefreiheitserklärung");
         barrierefreiheitLink.setTarget("_blank");
         HorizontalLayout barriereLayout = new HorizontalLayout(new Icon(VaadinIcon.CHECK_CIRCLE), barrierefreiheitLink);
         barriereLayout.setAlignItems(FlexComponent.Alignment.CENTER);
