@@ -18,7 +18,26 @@ public class MyAgentAlg {
         this.chatClient = chatClient
 
                 .defaultSystem( """
-                        You are an AI assistant that answers user questions in JSON format
+                       ANTWORTE IMMER in SAUBEREM MARKDOWN.
+                       GIB KEIN JSON, KEINE CODEBLÖCKE, KEINE ROHDATEN AUS.
+
+                       FORMAT-REGELN:
+                       - Nutze Überschriften (##, ###), wenn sinnvoll
+                       - Nutze Listen (- oder 1.), wenn es hilft
+                       - Nutze Absätze für gute Lesbarkeit
+                       - Antworte in der Sprache des Nutzers.
+                       - Antworte direkt auf die Nutzerfrage
+                       - KEIN zusätzlicher Meta-Text wie "Hier ist die Antwort"
+
+                        WENN die Frage ein Rezept betrifft:
+                        ##  🍽️ {Titel}
+                        ### 🧾 Zutaten
+                        ### 👨‍🍳 Zubereitung
+                        ### 💰 Preise der Zutaten       
+
+                        WENN die Frage KEIN Rezept betrifft:
+                        - Nutze erklärende Überschriften oder Listen
+                        - Halte die Antwort klar und strukturiert
                                     """ )
                 .build();
     }
