@@ -2,11 +2,16 @@ package org.example.frontend.View;
 
 import com.vaadin.flow.component.button.Button;
 import com.vaadin.flow.component.dependency.CssImport;
-import com.vaadin.flow.component.html.*;
+import com.vaadin.flow.component.html.Anchor;
+import com.vaadin.flow.component.html.Div;
+import com.vaadin.flow.component.html.H1;
+import com.vaadin.flow.component.html.Image;
 import com.vaadin.flow.component.icon.Icon;
 import com.vaadin.flow.component.icon.VaadinIcon;
 import com.vaadin.flow.component.notification.Notification;
-import com.vaadin.flow.component.orderedlayout.*;
+import com.vaadin.flow.component.orderedlayout.FlexComponent;
+import com.vaadin.flow.component.orderedlayout.HorizontalLayout;
+import com.vaadin.flow.component.orderedlayout.VerticalLayout;
 import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.annotation.SpringComponent;
@@ -33,44 +38,60 @@ public class SmartMealView extends HorizontalLayout {
     public SmartMealView() {
         setSizeFull();
 
-        // ===== NAVBAR =====
+        // --- Linke Navigationsleiste ---
         VerticalLayout navBar = new VerticalLayout();
         navBar.addClassName("navbar");
         navBar.setWidth("20%");
         navBar.setPadding(true);
+        navBar.setSpacing(true);
+        navBar.setDefaultHorizontalComponentAlignment(FlexComponent.Alignment.START);
 
+        // Logo Bereich
         Div logoDiv = new Div();
         logoDiv.setWidth("250px");
         logoDiv.setHeight("100px");
-        logoDiv.getStyle()
-                .set("background-image", "url('logo2.png')")
-                .set("background-size", "contain")
-                .set("background-repeat", "no-repeat")
-                .set("background-position", "center");
+        logoDiv.getStyle().set("background-image", "url('logo2.png')");
+        logoDiv.getStyle().set("background-size", "contain");
+        logoDiv.getStyle().set("background-repeat", "no-repeat");
+        logoDiv.getStyle().set("background-position", "center");
 
         Div spacer = new Div();
         spacer.setHeight("100px");
 
-        Anchor impressum = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Impressum");
-        impressum.setTarget("_blank");
+        // Price-L Button (Für Konsistenz mit RagBot)
+        Button priceLButton = new Button("Price-L", new Icon(VaadinIcon.TRENDING_UP));
+        priceLButton.addClassName("nav-button");
+        priceLButton.addClassName("nav-button-yellow");
+        priceLButton.addClickListener(e -> 
+            getUI().ifPresent(ui -> ui.getPage().open("https://app.oprfs.org/ingredient-price", "_blank"))
+        );
 
-        Anchor datenschutz = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Datenschutzinformation");
-        datenschutz.setTarget("_blank");
+        // Links mit Icons
+        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
+        impressumLink.setTarget("_blank");
+        HorizontalLayout impressumLayout = new HorizontalLayout(new Icon(VaadinIcon.CLOCK), impressumLink);
+        impressumLayout.setAlignItems(FlexComponent.Alignment.CENTER);
+        impressumLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
-        Anchor barriere = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Barrierefreiheitserklärung");
-        barriere.setTarget("_blank");
+        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
+        datenschutzLink.setTarget("_blank");
+        HorizontalLayout datenschutzLayout = new HorizontalLayout(new Icon(VaadinIcon.OPEN_BOOK), datenschutzLink);
+        datenschutzLayout.setAlignItems(FlexComponent.Alignment.CENTER);
+        datenschutzLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
+
+        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
+        barrierefreiheitLink.setTarget("_blank");
+        HorizontalLayout barriereLayout = new HorizontalLayout(new Icon(VaadinIcon.CHECK_CIRCLE), barrierefreiheitLink);
+        barriereLayout.setAlignItems(FlexComponent.Alignment.CENTER);
+        barriereLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
         Div chatLabel = new Div("Chat-Bot");
-        chatLabel.getStyle()
-                .set("margin-top", "auto")
-                .set("font-size", "24px")
-                .set("font-weight", "bold")
-                .set("color", "white")
-                .set("font-style", "italic");
+        chatLabel.getStyle().set("margin-top", "auto").set("font-size", "24px")
+                 .set("font-weight", "bold").set("color", "white").set("font-style", "italic");
 
-        navBar.add(logoDiv, spacer, impressum, datenschutz, barriere, chatLabel);
+        navBar.add(logoDiv, spacer, impressumLayout, datenschutzLayout, barriereLayout, chatLabel);
 
-        // ===== MAIN LAYOUT =====
+        // --- Hauptbereich ---
         VerticalLayout mainLayout = new VerticalLayout();
         mainLayout.setSizeFull();
         mainLayout.setPadding(false);
@@ -83,21 +104,22 @@ public class SmartMealView extends HorizontalLayout {
 
         Button chatbotButton = new Button("Chat-Bot");
         chatbotButton.addClassName("button-chatbot");
+        chatbotButton.addClassName("button-selected"); // Aktiv markieren
 
-        Button ragBotButton = new Button("RAG-Bot",
-                e -> getUI().ifPresent(ui -> ui.navigate("ragBot")));
+        Button ragBotButton = new Button("RAG-Bot", e -> getUI().ifPresent(ui -> ui.navigate("ragBot")));
         ragBotButton.addClassName("button-ragbot");
 
-        header.add(chatbotButton, ragBotButton);
+        header.add(chatbotButton, ragBotButton, priceLButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
-        // Title
+        // Titel
         H1 chatTitle = new H1("Dieser Chat-Bot beantwortet Fragen basierend auf der OpenAI-Datenbank");
         chatTitle.addClassName("chat-title");
 
-        // ===== CHAT AREA =====
+        // Nachrichtenbereich
         Div messageArea = new Div();
         messageArea.addClassName("chat-area");
+        messageArea.setWidthFull();
 
         Div placeholder = new Div("🤖 Hier steht die Antwort des LLM...");
         placeholder.getStyle().set("font-style", "italic");
@@ -105,7 +127,7 @@ public class SmartMealView extends HorizontalLayout {
 
         mainLayout.expand(messageArea);
 
-        // ===== INPUT =====
+        // Eingabefeld
         HorizontalLayout inputLayout = new HorizontalLayout();
         inputLayout.addClassName("input-layout");
         inputLayout.setWidthFull();
@@ -116,48 +138,58 @@ public class SmartMealView extends HorizontalLayout {
         inputField.setWidthFull();
         inputField.getStyle().set("resize", "none");
 
+        // JS für dynamische Höhe
         inputField.getElement().executeJs(
                 "this.style.height='auto';" +
                 "this.style.overflowY='hidden';" +
                 "this.addEventListener('input', function() {" +
-                "this.style.height='auto';" +
-                "this.style.height=(this.scrollHeight) + 'px';});"
+                "  this.style.height='auto';" +
+                "  this.style.height=(this.scrollHeight) + 'px';" +
+                "});"
         );
 
         Button sendButton = new Button(new Icon(VaadinIcon.PAPERPLANE));
         sendButton.addClassName("send-button");
 
-        inputLayout.add(inputField, sendButton);
+        // Mikrofon Button (identisch zu RagBot)
+        Button micButton = new Button(new Icon(VaadinIcon.MICROPHONE));
+        micButton.addClassName("mic-button");
+        micButton.addClickListener(e -> {
+            inputField.getElement().executeJs(
+                    "if (!('webkitSpeechRecognition' in window)) { alert('Browser Support fehlt'); } " +
+                    "else { var recognition = new webkitSpeechRecognition(); recognition.lang = 'de-DE'; " +
+                    "recognition.onresult = function(event) { $0.value = event.results[0][0].transcript; " +
+                    "$0.dispatchEvent(new Event('input', { bubbles: true })); }; recognition.start(); }", 
+                    inputField.getElement());
+        });
+
+        inputLayout.add(inputField, sendButton, micButton);
         inputLayout.setFlexGrow(1, inputField);
 
-        // ===== SEND BUTTON =====
+        // Send-Logik
         sendButton.addClickListener(e -> {
             String query = inputField.getValue().trim();
+            if (!query.isEmpty()) {
+                if (messageArea.getChildren().anyMatch(c -> c == placeholder)) messageArea.remove(placeholder);
 
-            if (query.isEmpty()) {
+                Div userMsg = new Div("User Frage: " + query);
+                userMsg.getStyle().set("font-weight", "bold").set("margin-bottom", "10px");
+                messageArea.add(userMsg);
+
+                String markdownAnswer = callBackend(query);
+                String html = convertMarkdownToHtml(markdownAnswer);
+
+                Div botMsg = new Div();
+                botMsg.addClassName("bot-message-markdown");
+                botMsg.getElement().setProperty("innerHTML", html);
+                messageArea.add(botMsg);
+
+                messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
+                inputField.clear();
+                inputField.getElement().executeJs("this.style.height='auto';");
+            } else {
                 Notification.show("Bitte geben Sie eine Frage ein!");
-                return;
             }
-
-            if (messageArea.getChildren().anyMatch(c -> c == placeholder)) {
-                messageArea.remove(placeholder);
-            }
-
-            Div userMsg = new Div("User Frage: " + query);
-            userMsg.getStyle().set("font-weight", "bold");
-            messageArea.add(userMsg);
-
-            String markdownAnswer = callBackend(query);
-            String html = convertMarkdownToHtml(markdownAnswer);
-
-            Div botMsg = new Div();
-            botMsg.addClassName("bot-message-markdown");
-            botMsg.getElement().setProperty("innerHTML", html);
-
-            messageArea.add(botMsg);
-            messageArea.getElement().executeJs("this.scrollTop = this.scrollHeight");
-
-            inputField.clear();
         });
 
         mainLayout.add(header, chatTitle, messageArea, inputLayout);
@@ -165,38 +197,24 @@ public class SmartMealView extends HorizontalLayout {
         setFlexGrow(1, mainLayout);
     }
 
-    // ===== BACKEND CALL =====
     private String callBackend(String question) {
         try {
-            String urlString =
-                    "http://localhost:8070/askLLM?question=" +
-                    URLEncoder.encode(question, StandardCharsets.UTF_8);
-
-            HttpURLConnection conn =
-                    (HttpURLConnection) new URL(urlString).openConnection();
+            String urlString = "http://localhost:8070/askLLM?question=" + URLEncoder.encode(question, StandardCharsets.UTF_8);
+            HttpURLConnection conn = (HttpURLConnection) new URL(urlString).openConnection();
             conn.setRequestMethod("GET");
-
-            BufferedReader in = new BufferedReader(
-                    new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
-
+            BufferedReader in = new BufferedReader(new InputStreamReader(conn.getInputStream(), StandardCharsets.UTF_8));
             StringBuilder response = new StringBuilder();
             String line;
-            while ((line = in.readLine()) != null) {
-                response.append(line).append("\n");
-            }
-
+            while ((line = in.readLine()) != null) response.append(line).append("\n");
             in.close();
-            conn.disconnect();
             return response.toString();
-
         } catch (Exception e) {
-            e.printStackTrace();
             return "**Fehler:** Backend nicht erreichbar.";
         }
     }
 
-    // ===== MARKDOWN → HTML =====
     private String convertMarkdownToHtml(String markdown) {
+        if (markdown == null || markdown.isEmpty()) return "";
         Parser parser = Parser.builder().build();
         Node document = parser.parse(markdown);
         HtmlRenderer renderer = HtmlRenderer.builder().build();
