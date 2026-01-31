@@ -58,28 +58,22 @@ public class SmartMealView extends HorizontalLayout {
         Div spacer = new Div();
         spacer.setHeight("100px");
 
-        // Price-L Button (Für Konsistenz mit RagBot)
-        Button priceLButton = new Button("Price-L", new Icon(VaadinIcon.TRENDING_UP));
-        priceLButton.addClassName("nav-button");
-        priceLButton.addClassName("nav-button-yellow");
-        priceLButton.addClickListener(e -> 
-            getUI().ifPresent(ui -> ui.getPage().open("https://app.oprfs.org/ingredient-price", "_blank"))
-        );
+      
 
         // Links mit Icons
-        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
+        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Impressum");
         impressumLink.setTarget("_blank");
         HorizontalLayout impressumLayout = new HorizontalLayout(new Icon(VaadinIcon.CLOCK), impressumLink);
         impressumLayout.setAlignItems(FlexComponent.Alignment.CENTER);
         impressumLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
-        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
+        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Datenschutzinformation");
         datenschutzLink.setTarget("_blank");
         HorizontalLayout datenschutzLayout = new HorizontalLayout(new Icon(VaadinIcon.OPEN_BOOK), datenschutzLink);
         datenschutzLayout.setAlignItems(FlexComponent.Alignment.CENTER);
         datenschutzLayout.getChildren().findFirst().ifPresent(icon -> ((Icon)icon).setSize("14px"));
 
-        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
+        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Barrierefreiheitserklärung");
         barrierefreiheitLink.setTarget("_blank");
         HorizontalLayout barriereLayout = new HorizontalLayout(new Icon(VaadinIcon.CHECK_CIRCLE), barrierefreiheitLink);
         barriereLayout.setAlignItems(FlexComponent.Alignment.CENTER);
@@ -109,7 +103,7 @@ public class SmartMealView extends HorizontalLayout {
         Button ragBotButton = new Button("RAG-Bot", e -> getUI().ifPresent(ui -> ui.navigate("ragBot")));
         ragBotButton.addClassName("button-ragbot");
 
-        header.add(chatbotButton, ragBotButton, priceLButton);
+        header.add(chatbotButton, ragBotButton);
         header.setAlignItems(FlexComponent.Alignment.CENTER);
 
         // Titel
