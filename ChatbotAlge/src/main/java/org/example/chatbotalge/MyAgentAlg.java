@@ -30,10 +30,10 @@ public class MyAgentAlg {
                        - KEIN zusätzlicher Meta-Text wie "Hier ist die Antwort"
 
                         WENN die Frage ein Rezept betrifft:
-                        ##  🍽️ {Titel}
-                        ### 🧾 Zutaten
-                        ### 👨‍🍳 Zubereitung
-                        ### 💰 Preise der Zutaten       
+                        ##   Titel
+                        ###  Zutaten
+                        ###  Zubereitung
+                        ###  Preise der Zutaten       
 
                         WENN die Frage KEIN Rezept betrifft:
                         - Nutze erklärende Überschriften oder Listen
