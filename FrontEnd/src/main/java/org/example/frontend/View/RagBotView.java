@@ -78,13 +78,13 @@ public class RagBotView extends HorizontalLayout {
 // === Ende Price-L Button =====
 
         // Links
-        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Impressum");
+        Anchor impressumLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Impressum");
         impressumLink.setTarget("_blank");
 
-        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Datenschutzinformation");
+        Anchor datenschutzLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Datenschutzinformation");
         datenschutzLink.setTarget("_blank");
 
-        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/jobs.html", "Barrierefreiheitserklärung");
+        Anchor barrierefreiheitLink = new Anchor("https://www.fit.fraunhofer.de/de/impressum.html", "Barrierefreiheitserklärung");
         barrierefreiheitLink.setTarget("_blank");
 
         // Icons & Layouts für Links
