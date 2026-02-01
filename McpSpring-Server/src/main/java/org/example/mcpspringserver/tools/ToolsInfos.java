@@ -101,11 +101,7 @@ public class ToolsInfos {
         return fragenHistoryService.getLast1();
     }
 
-    @Tool(description = "Returns the last three saved questions and answers.")
-    public List<FragenHistory> getLast3Questions() {
-        return fragenHistoryService.getLast3();
-    }
-
+   
 
 
 
