@@ -3,6 +3,8 @@ package org.example.mcpspringserver.tools;
 import org.example.mcpspringserver.entities.FragenHistory;
 import org.example.mcpspringserver.repository.FragenHistoryrepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
 
 import java.util.List;
 
