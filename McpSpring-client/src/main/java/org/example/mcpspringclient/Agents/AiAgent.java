@@ -54,7 +54,6 @@ private final ChatClient.Builder chatClientBuilder;
                         
                         
                                                  -If the user asks about prices or costs of ingredients,you must include the price for every ingredient in each recipe. always use Only the provided database tools getAllIngredients() to fetch the actual prices from the database and include them in the answer.
-                                                 -If the user does not ask about prices, strictly do not include any price information.
                                                  -If no results are found, politely inform the user do NOT generate SPARQL queries
                         
                                                  Important rules:
