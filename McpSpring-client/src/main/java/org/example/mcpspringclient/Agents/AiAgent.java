@@ -32,7 +32,15 @@ public class AiAgent {
                 )
                 .defaultSystem("""
                         You are an AI Assistant that answers user questions about recipes
-                        
+
+                                                Memory rule:
+                                                - If the user refers to a previously mentioned recipe in the same conversation,
+                                                  use the chat history to answer directly.
+                                                - Do NOT call database tools again unless new information is required.
+                                                - If the requested information is already available in the conversation history,
+                                                  answer from memory.
+
+                                                  General behavior:
                                                  -Translate the user's question into English if necessary,
                                                  -The SPARQL query has already been generated and executed by the MCP-server,
                                                  -your task is to read the JSON results returned from the query,
