@@ -28,6 +28,8 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
+import java.util.UUID;
+
 
 @SpringComponent
 @UIScope
@@ -35,6 +37,8 @@ import java.nio.charset.StandardCharsets;
 @CssImport("./styles/shared-styles.css")
 public class RagBotView extends HorizontalLayout {
 
+private final String conversationId = UUID.randomUUID().toString();
+    
     public RagBotView() {
         setSizeFull();
 
@@ -255,7 +259,8 @@ public class RagBotView extends HorizontalLayout {
     // --- Hilfsmethode: Backend Aufruf ---
     private String callBackend(String query) {
         try {
-            String urlString = "http://localhost:8066/chat?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8);
+            String urlString = "http://localhost:8066/chat?query=" + URLEncoder.encode(query, StandardCharsets.UTF_8)
+            + "&conversationId=" + conversationId;
             URL url = new URL(urlString);
             HttpURLConnection conn = (HttpURLConnection) url.openConnection();
             conn.setRequestMethod("GET");
