@@ -54,8 +54,9 @@ public class AiAgent {
                 .build();
     }
 
-    public String askLLM(String query){
+    public String askLLM(String conversationId , String query){
         return chatClient.prompt()
+                .conversationId(conversationId)
                 .user(query)
                 .call()
                 .content();
