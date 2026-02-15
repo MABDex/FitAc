@@ -1,11 +1,17 @@
 package org.example.mcpspringclient.Agents;
 
 
+//import org.springframework.ai.chat.client.ChatClient;
+//import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
+//import org.springframework.ai.chat.memory.MessageWindowChatMemory;
+//import org.springframework.ai.tool.ToolCallbackProvider;
+//import org.springframework.ai.tool.method.MethodToolCallbackProvider;
+//import org.springframework.stereotype.Service;
+
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.ai.chat.client.advisor.MessageChatMemoryAdvisor;
-import org.springframework.ai.chat.memory.MessageWindowChatMemory;
+import org.springframework.ai.chat.memory.ChatMemory;
 import org.springframework.ai.tool.ToolCallbackProvider;
-import org.springframework.ai.tool.method.MethodToolCallbackProvider;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -14,9 +20,12 @@ public class AiAgent {
 
     private ChatClient chatClient;
                                                   // Object contient la Liste des Tools
-    public AiAgent(ChatClient.Builder chatClient , ToolCallbackProvider toolCallbackProvider) {
+    public AiAgent(ChatClient.Builder chatClient , ToolCallbackProvider toolCallbackProvider , ChatMemory chatMemory) {
         this.chatClient = chatClient
                 .defaultToolCallbacks(toolCallbackProvider)
+                .defaultAdvisors(
+                        MessageChatMemoryAdvisor.builder(chatMemory).build()
+                )
                 .defaultSystem( """
                         You are an AI Assistant that answers user questions about recipes
                         
