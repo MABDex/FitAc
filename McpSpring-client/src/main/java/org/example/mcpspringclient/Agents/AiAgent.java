@@ -62,7 +62,7 @@ public class AiAgent {
         // Hier nutzen wir den fertigen Client und übergeben nur die ID als Parameter
         return chatClient.prompt()
                 .user(query)
-                .advisors(a -> a.param(MessageChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, conversationId))
+                .advisors(a -> a.param("conversationId", conversationId))
                 .call()
                 .content();
     }
