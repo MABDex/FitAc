@@ -37,10 +37,18 @@ import java.util.UUID;
 @CssImport("./styles/shared-styles.css")
 public class RagBotView extends HorizontalLayout {
 
-private final String conversationId = UUID.randomUUID().toString();
+private String conversationId;
     
     public RagBotView() {
         setSizeFull();
+
+        
+         // --- Conversation ID pro User-Session ---
+        conversationId = VaadinSession.getCurrent().getAttribute("conversationId");
+        if (conversationId == null) {
+            conversationId = UUID.randomUUID().toString();
+            VaadinSession.getCurrent().setAttribute("conversationId", conversationId);
+        }
 
         // --- Linke Navigationsleiste ---
         VerticalLayout navBar = new VerticalLayout();
