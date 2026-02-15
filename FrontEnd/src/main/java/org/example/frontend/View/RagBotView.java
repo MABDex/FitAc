@@ -46,7 +46,7 @@ private String conversationId;
 
         
          // --- Conversation ID pro User-Session ---
-        conversationId = VaadinSession.getCurrent().getAttribute("conversationId");
+        conversationId =(String) VaadinSession.getCurrent().getAttribute("conversationId");
         if (conversationId == null) {
             conversationId = UUID.randomUUID().toString();
             VaadinSession.getCurrent().setAttribute("conversationId", conversationId);
