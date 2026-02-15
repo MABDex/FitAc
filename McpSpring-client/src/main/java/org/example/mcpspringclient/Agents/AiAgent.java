@@ -17,27 +17,18 @@ import org.springframework.stereotype.Service;
 @Service
 public class AiAgent {
 
-private final ChatClient.Builder chatClientBuilder;
-    private final ToolCallbackProvider toolCallbackProvider;
-    private final ChatMemory chatMemory;
+    private final ChatClient chatClient;
 
     public AiAgent(ChatClient.Builder chatClientBuilder,
                    ToolCallbackProvider toolCallbackProvider,
                    ChatMemory chatMemory) {
 
-        this.chatClientBuilder = chatClientBuilder;
-        this.toolCallbackProvider = toolCallbackProvider;
-        this.chatMemory = chatMemory;
-    }
-
-    public String askLLM(String conversationId, String query) {
-
-        ChatClient chatClient = chatClientBuilder
+        // Wir bauen den Client EINMALIG im Konstruktor
+        this.chatClient = chatClientBuilder
                 .defaultToolCallbacks(toolCallbackProvider)
                 .defaultAdvisors(
-                        MessageChatMemoryAdvisor.builder(chatMemory)
-                                .conversationId(conversationId)
-                                .build()
+                        // Wir registrieren den Advisor global für diesen Client
+                        MessageChatMemoryAdvisor.builder(chatMemory).build()
                 )
                 .defaultSystem("""
                         You are an AI Assistant that answers user questions about recipes
@@ -54,6 +45,7 @@ private final ChatClient.Builder chatClientBuilder;
                         
                         
                                                  -If the user asks about prices or costs of ingredients,you must include the price for every ingredient in each recipe. always use Only the provided database tools getAllIngredients() to fetch the actual prices from the database and include them in the answer.
+                                                 -If the user does not ask about prices, strictly do not include any price information.
                                                  -If no results are found, politely inform the user do NOT generate SPARQL queries
                         
                                                  Important rules:
@@ -64,17 +56,14 @@ private final ChatClient.Builder chatClientBuilder;
                         
                         """)
                 .build();
+    }
 
+    public String askLLM(String conversationId, String query) {
+        // Hier nutzen wir den fertigen Client und übergeben nur die ID als Parameter
         return chatClient.prompt()
                 .user(query)
+                .advisors(a -> a.param(MessageChatMemoryAdvisor.CHAT_MEMORY_CONVERSATION_ID_KEY, conversationId))
                 .call()
                 .content();
     }
-
-
-
-
-
-
-
 }
