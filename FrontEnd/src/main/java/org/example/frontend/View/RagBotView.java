@@ -16,6 +16,8 @@ import com.vaadin.flow.component.textfield.TextArea;
 import com.vaadin.flow.router.Route;
 import com.vaadin.flow.spring.annotation.SpringComponent;
 import com.vaadin.flow.spring.annotation.UIScope;
+import com.vaadin.flow.server.VaadinSession;
+
 
 // Neue Imports für Markdown
 import org.commonmark.node.Node;
