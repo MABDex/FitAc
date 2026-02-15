@@ -21,9 +21,9 @@ public class AiRestController {
 
 
     @GetMapping(value = "/chat" , produces = MediaType.TEXT_PLAIN_VALUE)
-    public ResponseEntity<String> chat(@RequestParam String query) {
+    public ResponseEntity<String> chat(@RequestParam String query , @RequestParam String chatId) {
         try {
-            String answer = aiAgent.askLLM(query);
+            String answer = aiAgent.askLLM(chatId , query);
 
             // Optional: prüfen, ob die Antwort leer ist oder Fehler enthält
             if (answer == null || answer.isEmpty() || answer.contains("MALFORMED QUERY")) {
