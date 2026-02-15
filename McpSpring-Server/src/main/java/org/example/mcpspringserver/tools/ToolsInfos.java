@@ -96,10 +96,7 @@ public class ToolsInfos {
         return repository.findAll();
     }
 
-    @Tool(description = "Returns the last saved question and answer.")
-    public FragenHistory getLastQuestion() {
-        return fragenHistoryService.getLast1();
-    }
+   
 
    
 
