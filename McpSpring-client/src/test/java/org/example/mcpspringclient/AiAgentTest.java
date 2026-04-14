@@ -6,8 +6,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.ai.chat.client.ChatClient;
+import org.springframework.ai.chat.client.advisor.api.Advisor;
 import org.springframework.ai.chat.memory.ChatMemory;
+import org.springframework.ai.tool.ToolCallback;
 import org.springframework.ai.tool.ToolCallbackProvider;
+
+import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.*;
 import static org.mockito.Mockito.*;
@@ -37,15 +41,23 @@ class AiAgentTest {
 
     @BeforeEach
     void setup() {
-
-        when(builder.defaultToolCallbacks(any())).thenReturn(builder);
-        when(builder.defaultAdvisors(any())).thenReturn(builder);
+        // Wir nutzen explizite Typen für die Matcher, um die "ambiguous reference" Fehler zu beheben
+        
+        // 1. Stubbing für defaultToolCallbacks (Varargs Version)
+        when(builder.defaultToolCallbacks(any(ToolCallback[].class))).thenReturn(builder);
+        
+        // 2. Stubbing für defaultAdvisors (Varargs Version)
+        when(builder.defaultAdvisors(any(Advisor[].class))).thenReturn(builder);
+        
         when(builder.defaultSystem(anyString())).thenReturn(builder);
         when(builder.build()).thenReturn(chatClient);
 
         when(chatClient.prompt()).thenReturn(requestSpec);
         when(requestSpec.user(anyString())).thenReturn(requestSpec);
-        when(requestSpec.advisors(any())).thenReturn(requestSpec);
+        
+        // 3. Stubbing für advisors im RequestSpec (Varargs Version)
+        when(requestSpec.advisors(any(Advisor[].class))).thenReturn(requestSpec);
+        
         when(requestSpec.call()).thenReturn(responseSpec);
         when(responseSpec.content()).thenReturn("AI Answer");
 
